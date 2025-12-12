@@ -3,52 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>곽영훈 회장님 - 대한민국 국토 비전 | Kwaak Young-hoon - Korea's National Vision</title>
+    <title>대한민국을 바꾼 도시계획가, 곽영훈 회장님</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7f7f7;
-            color: #1f2937; /* Dark Gray */
+            background-color: #ffffff; /* Clean white background */
+            color: #111827; /* Darker text for contrast */
         }
         .container-xl { max-width: 1280px; }
         
         /* Language handling classes */
         .hidden-lang { display: none; }
+        .lang-button {
+            transition: all 0.2s ease;
+            color: #4b5563;
+        }
         .lang-button.active {
             background-color: #3b82f6; /* Blue */
             color: white;
+            font-weight: 600;
         }
 
-        /* Map background: Updated to use the SR Times map URL */
+        /* Hero Image/Text Layout */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            padding: 8rem 0;
+        }
+        
+        /* Map background - Using a fixed size for the container, ensuring containment of the diagram */
         .vision-map-container {
-            /* Adjusted padding to a standard 100% for a clean, square map outline on mobile */
-            padding-bottom: 100%; 
+            padding-bottom: 70%; /* Adjusted for a wider map ratio */
             height: 0;
             position: relative;
-            /* FIX: Using SR Times map URL as requested */
-            background-image: url('https://cdn.srtimes.kr/news/photo/202312/148596_145826_952.jpg'); 
-            background-size: contain; /* Use 'contain' to ensure the whole map outline is visible */
+            /* FIX: Updated MVIP map image URL to GitHub Raw link */
+            background-image: url('https://raw.githubusercontent.com/ekwak22/kwaak/refs/heads/main/kwaak_map.jpg'); 
+            background-size: contain; 
             background-repeat: no-repeat;
             background-position: center; 
             border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            max-width: 700px; /* Increased max-width for better map view */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            background-color: #f0f4f8; /* Light blue background for map area */
+            background-color: #f0f4f8;
+            border: 1px solid #e5e7eb;
         }
         
-        @media (min-width: 768px) {
-            .vision-map-container {
-                /* Adjust padding for desktop view to a wider ratio */
-                padding-bottom: 60%; 
-                max-width: 100%;
-            }
-        }
-        
-        /* Styles for the interactive points (overlay on static image) */
+        /* Interactive map points */
         .map-point {
             position: absolute;
             width: 24px;
@@ -67,12 +71,11 @@
         }
         .map-point:hover {
             transform: scale(1.5);
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.8); /* Blue shadow on hover */
+            box-shadow: 0 0 12px 2px rgba(59, 130, 246, 0.9);
         }
         .pole-color { background-color: #ef4444; } /* Red */
         .port-color { background-color: #3b82f6; } /* Blue */
         .valley-color { background-color: #10b981; } /* Green */
-        .project-color { background-color: #f59e0b; } /* Amber/Orange for realized projects */
         
         /* Modal styles */
         .modal {
@@ -84,308 +87,263 @@
             visibility: visible;
             opacity: 1;
         }
-
-        /* Styles for the project gallery image */
-        .project-gallery-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-            cursor: zoom-in;
+        
+        /* --- Animation Gallery CSS --- */
+        .project-animation-gallery {
+            width: 100%;
+            /* Height set to match width (1:1 aspect ratio) */
+            height: 400px; 
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: 1px solid #e5e7eb;
+            background-color: #f9fafb;
         }
+
+        .project-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            filter: grayscale(10%) brightness(0.95);
+        }
+
+        .project-slide.active {
+            opacity: 1;
+            filter: grayscale(0%) brightness(1);
+        }
+
+        /* Titles removed as requested */
+        /* --- End of Animation Gallery CSS --- */
     </style>
 </head>
 <body>
 
-    <!-- Header & Language Selector Section -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
         <div class="container-xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-gray-900">
-                <span class="lang-kr"><span class="text-blue-600">곽영훈</span> 회장님의 비전</span>
-                <span class="lang-en hidden-lang"><span class="text-blue-600">Kwaak Young-hoon's</span> Vision</span>
+            <h1 class="text-2xl font-extrabold text-gray-900">
+                <span class="text-blue-600 font-extrabold">KYH</span> <span class="lang-kr">비전</span><span class="lang-en hidden-lang">Vision</span>
             </h1>
-            <nav class="flex items-center space-x-4">
-                <!-- Navigation Links (kept dual language for minimal disruption to layout) -->
-                <a href="#intro" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-lg transition hidden sm:inline">
+            <nav class="flex items-center space-x-6">
+                <a href="#intro" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-1 transition">
                     <span class="lang-kr">소개</span><span class="lang-en hidden-lang">Intro</span>
                 </a>
-                <a href="#vision" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-lg transition">
+                <a href="#vision" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-1 transition">
                     <span class="lang-kr">국토 비전</span><span class="lang-en hidden-lang">National Vision</span>
                 </a>
-                <a href="#peace" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-lg transition">
-                    <span class="lang-kr">평화 운동</span><span class="lang-en hidden-lang">Peace Work</span>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-1 transition">
+                    <span class="lang-kr">프로젝트</span><span class="lang-en hidden-lang">Projects</span>
                 </a>
-                <a href="#projects" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-lg transition">
-                    <span class="lang-kr">주요 프로젝트</span><span class="lang-en hidden-lang">Key Projects</span>
+                <a href="#peace" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-1 transition">
+                    <span class="lang-kr">평화</span><span class="lang-en hidden-lang">Peace</span>
                 </a>
 
-                <!-- Language Selector -->
                 <div class="border-l pl-4 flex space-x-2">
-                    <button id="lang-kr-btn" onclick="setLanguage('kr')" class="lang-button text-sm font-semibold px-2 py-1 rounded-lg transition border border-gray-300">KR</button>
-                    <button id="lang-en-btn" onclick="setLanguage('en')" class="lang-button text-sm font-semibold px-2 py-1 rounded-lg transition border border-gray-300">EN</button>
+                    <button id="lang-kr-btn" onclick="setLanguage('kr')" class="lang-button text-xs font-medium px-2 py-1 rounded-lg border border-gray-300">KR</button>
+                    <button id="lang-en-btn" onclick="setLanguage('en')" class="lang-button text-xs font-medium px-2 py-1 rounded-lg transition border border-gray-300">EN</button>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Wrapper -->
-    <main class="container-xl mx-auto px-4 py-12">
+    <!-- Main Content -->
+    <main class="container-xl mx-auto px-4">
 
-        <!-- 1. Introduction & Biography Section -->
-        <section id="intro" class="mb-16 bg-white p-8 rounded-xl shadow-xl">
-            <div class="md:flex items-start">
-                <div class="md:w-3/5 md:pr-10">
-                    <h2 class="text-4xl font-bold mb-4 text-blue-800">
-                        <span class="lang-kr">대한민국을 바꾼 도시계획가, 곽영훈 회장님</span>
-                        <span class="lang-en hidden-lang">Master Planner Kwaak Young-hoon, Who Transformed South Korea</span>
-                    </h2>
-                    
-                    <p class="text-gray-700 leading-relaxed mb-4 lang-kr">
-                        곽영훈 회장님은 MIT와 하버드 출신의 세계적인 정책 건축 설계사로, 1970년대부터 대한민국의 국토와 도시 구조를 혁신적으로 설계해 온 선구적인 도시 계획가입니다. 그의 비전은 단순한 개발을 넘어, 문화(Cultra)와 기술(Techno)이 융합된 네트워크를 통해 국가 발전의 새로운 축을 제시하는 데 있었습니다. <span class="font-semibold text-blue-600">특히, 서울 지하철 2호선의 순환선 구상은 강남 개발을 촉진하며 오늘날의 서울의 골격을 형성하는 결정적인 계기가 되었습니다.</span>
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-4 lang-en hidden-lang">
-                        Chairman Kwaak Young-hoon, a world-class policy architect and urban planner from MIT and Harvard, has innovatively designed Korea's national territory and urban structure since the 1970s. His vision extends beyond mere development, focusing on creating a new axis for national growth through a network fusing Culture (Cultra) and Technology (Techno). <span class="font-semibold text-blue-600">Notably, his conceptualization of Seoul Subway Line 2's loop system was crucial in stimulating Gangnam's development, shaping modern Seoul.</span>
-                    </p>
-
-                    <p class="text-gray-700 leading-relaxed lang-kr">
-                        올림픽 공원 조성 시에는 몽촌토성(Mongchon Earthen Fortress)을 보존하고 생태 공원과 조화되도록 하는 데 힘썼으며, 대학로를 아파트 단지 대신 문화 예술의 거리로 설계하며 K-Culture의 본산이 되는 토대를 마련했습니다. 그는 도시 계획을 넘어, DMZ 평화 도시 구상과 WCO(세계시민기구) 활동을 통해 인류 공존과 평화를 위한 정책 설계로 그 영역을 확장하고 있습니다.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed lang-en hidden-lang">
-                        He championed the preservation of Mongchon Earthen Fortress during the Seoul Olympic Park creation and designed Daehangno as a cultural and artistic district, laying the foundation for K-Culture. Beyond urban planning, he expands his work into policy design for global peace and coexistence through the DMZ Peace City concept and the World Citizens Organization (WCO).
-                    </p>
-                    
-                    <h3 class="text-2xl font-bold mt-8 mb-3 text-blue-800 border-t pt-4 border-gray-200">
-                        <span class="lang-kr">비전 철학 요약 (인터뷰 기반)</span>
-                        <span class="lang-en hidden-lang">Vision Philosophy Summary (Based on Interview)</span>
-                    </h3>
-                    <ul class="list-disc ml-5 space-y-2 text-gray-700">
-                        <li>
-                            <span class="lang-kr">정책 건축가 역할: 단순히 건물을 짓는 건축가를 넘어, 환경설계와 마스터 플랜(종합 계획)을 통해 국토의 개발과 보존 방향을 제시하는 '정책 건축가'로서 활동했습니다.</span>
-                            <span class="lang-en hidden-lang">Role as Policy Architect: He acted as a 'Policy Architect,' moving beyond just building structures to provide direction for national development and preservation through environmental design and master planning.</span>
-                        </li>
-                        <li>
-                            <span class="lang-kr">활성 축과 녹지 축: 1971년부터 한반도의 국토 개발을 개발 중심의 활성 축 (지안~평양~서울~대전~여수)과 균형 및 보존 중심의 녹지 축 (백두산~한라산)으로 나누어 계획했습니다.</span>
-                            <span class="lang-en hidden-lang">Active and Green Axes: Since 1971, he planned national development around an Active Axis (development focus: Jian-Pyongyang-Seoul-Daejeon-Yeosu) and a Green Axis (balance/preservation focus: Baekdu-Halla Mountains) for national development.</span>
-                        </li>
-                        <li>
-                            <span class="lang-kr">글로벌 이벤트 접목: 서울 올림픽(88), 대전 엑스포(93), 여수 엑스포(12), 평창 동계올림픽(18) 등 글로벌 이벤트를 활성 축 개발의 촉매제로 활용하여 50년 전의 꿈을 현실화했습니다.</span>
-                            <span class="lang-en hidden-lang">Integration of Global Events: He leveraged global events (Olympics, Expos) as catalysts for development along the Active Axis, realizing visions planned 50 years prior.</span>
-                        </li>
-                        <li>
-                            <span class="lang-kr">인간 중심 설계: 도시 건설의 설계는 인간 생활 조건, 역사, 문화, 자연환경에 더해 **평화(Peace) 환경 공간**이 추가되어야 함을 강조하며, 이용자의 편리함과 공간의 조화를 최우선했습니다.</span>
-                            <span class="lang-en hidden-lang">Human-Centric Design: He emphasized that urban design must include a **Peace Environment Space** in addition to human living conditions, history, culture, and nature, prioritizing user convenience and spatial harmony.</span>
-                        </li>
-                        <li>
-                            <span class="lang-kr">정책 제안자 역할: 청계천 복원 아이디어 (미국 '빅 딕' 프로젝트 참고)와 서울시 버스 중앙차선제 (브라질 쿠리치바시 참고) 등을 당시 서울 시장에게 제안하여 실제 정책 실행으로 이어지게 했습니다.</span>
-                            <span class="lang-en hidden-lang">Policy Initiator Role: He proposed key initiatives like the Cheonggyecheon Restoration (inspired by the US 'Big Dig') and Seoul's bus rapid transit system (inspired by Curitiba, Brazil) to city officials, leading to their implementation.</span>
-                        </li>
-                        <li>
-                            <span class="lang-kr">지역 균형 발전: 낙후 지역 발전을 위해 여수를 중심으로 호남권 개발에 집중했으며, 여수시청사를 전통 한옥으로 설계하려 하는 등 지역 고유의 문화 보존과 발전을 시도했습니다.</span>
-                            <span class="lang-en hidden-lang">Regional Balanced Development: He focused on developing the Honam region (centered around Yeosu) to uplift lagging areas, attempting to incorporate local culture and heritage, such as proposing a traditional Hanok design for the Yeosu City Hall.</span>
-                        </li>
-                        <li>
-                            <span class="lang-kr">문화/과학 인프라 구상: 서울 예술의 전당(서초동 우면산) 및 대덕연구단지/KAIST 설립 구상 등 과학기술과 문화 예술 인프라의 초기 위치 선정 및 계획에 참여하여 서울의 균형 발전에 기여했습니다.</span>
-                            <span class="lang-en hidden-lang">Culture/Science Infrastructure Planning: He participated in the initial location selection and planning of key culture and science infrastructure, including the Seoul Arts Center and the establishment of the Daedeok Science Town/KAIST, contributing to Seoul's balanced development.</span>
-                        </li>
-                    </ul>
-
-                    <ul class="mt-6 space-y-2 text-sm text-gray-600">
-                        <li><span class="font-semibold">
-                            <span class="lang-kr">학력</span><span class="lang-en hidden-lang">Education</span>:
-                        </span> MIT (Architecture), Harvard University (Policy & Education)</li>
-                        <li><span class="font-semibold">
-                            <span class="lang-kr">주요 직책</span><span class="lang-en hidden-lang">Positions</span>:
-                        </span> (Current) Chairman of the People & Environment Group, President of UNA ROK, Founder/Representative of WCO</li>
-                    </ul>
-                </div>
-                <div class="md:w-2/5 mt-8 md:mt-0 relative">
-                    <!-- Portrait Image -->
-                    <img src="https://monthly.chosun.com/upload/1511/1511_386.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/1e40af/ffffff?text=Kwaak+Young-hoon+Portrait';" alt="곽영훈 회장님 초상화 (Kwaak Young-hoon Portrait)" class="rounded-xl w-full object-cover shadow-2xl h-[500px]">
-                    <div class="absolute inset-0 bg-blue-600 opacity-10 rounded-xl"></div>
-                </div>
+        <!-- 1. Hero / Intro Section (Elaborated) -->
+        <section id="intro" class="mb-20 hero-section">
+            <div class="w-full md:w-3/5 md:pr-20">
+                <!-- H1 title set as requested -->
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
+                    <span class="lang-kr">대한민국을 바꾼 도시계획가,</span>
+                    <span class="lang-en hidden-lang">Master Planner Who Transformed Korea,</span>
+                    <br>
+                    <span class="text-blue-600 lang-kr">곽영훈 회장님</span>
+                    <span class="text-blue-600 lang-en hidden-lang">Chairman Kwaak Young-hoon</span>
+                </h1>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    <span class="lang-kr">곽영훈 회장님은 MIT와 하버드 출신의 세계적인 정책 건축 설계사로, 1970년대부터 대한민국의 국토와 도시 구조를 혁신적으로 설계해 온 선구적인 도시 계획가입니다. 그의 비전은 단순한 개발을 넘어, 문화(Cultra)와 기술(Techno)이 융합된 네트워크를 통해 국가 발전의 새로운 축을 제시하는 데 있었습니다. 특히, 서울 지하철 2호선의 순환선 구상은 강남 개발을 촉진하며 오늘날의 서울의 골격을 형성하는 결정적인 계기가 되었습니다. 올림픽 공원 조성 시에는 몽촌토성(Mongchon Earthen Fortress)을 보존하고 생태 공원과 조화되도록 하는 데 힘썼으며, 대학로를 아파트 단지 대신 문화 예술의 거리로 설계하며 K-Culture의 본산이 되는 토대를 마련했습니다. 그는 도시 계획을 넘어, DMZ 평화 도시 구상과 WCO(세계시민기구) 활동을 통해 인류 공존과 평화를 위한 정책 설계로 그 영역을 확장하고 있습니다.</span>
+                    <span class="lang-en hidden-lang">Chairman Kwaak Young-hoon is a world-class policy architect and urban designer from MIT and Harvard, who has pioneered the innovative design of Korea's national land and urban structure since the 1970s. His vision went beyond simple development, focusing on presenting a new axis of national development through a network that fuses Culture (Cultra) and Technology (Techno). In particular, his conceptualization of the Seoul Subway Line 2 loop system was crucial in stimulating Gangnam's development, forming the critical framework of modern Seoul. When creating Olympic Park, he emphasized the preservation of Mongchon Earthen Fortress and its harmony with the ecological park. He also designed Daehangno as a cultural and artistic street instead of an apartment complex, laying the foundation for K-Culture. Beyond urban planning, he is expanding his domain into policy design for human coexistence and peace through the DMZ Peace City concept and the World Citizens Organization (WCO) activities.</span>
+                </p>
+                <a href="#projects" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                    <span class="lang-kr">핵심 프로젝트 보기</span>
+                    <span class="lang-en hidden-lang">View Key Projects</span>
+                </a>
+            </div>
+            <div class="hidden md:block md:w-2/5 relative">
+                <!-- Portrait Image -->
+                <img src="https://monthly.chosun.com/upload/1511/1511_386.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/1e40af/ffffff?text=Kwaak+Young-hoon+Portrait';" alt="곽영훈 회장님 초상화" class="rounded-xl w-full object-cover shadow-2xl h-[500px] border-4 border-gray-100">
             </div>
         </section>
 
-        <!-- 2. Static Vision Map Section (MVIP - Master Vision and Implementation Plan for Korea 3, 1981) -->
-        <section id="vision" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">
-                <span class="lang-kr">MVIP: 1981 Techno-Cultra-Network 비전 (정적 지도)</span>
-                <span class="lang-en hidden-lang">MVIP: 1981 Techno-Cultra-Network Vision (Static Map)</span>
+        <!-- 2. Projects Animation Gallery -->
+        <section id="projects" class="mb-20">
+            <!-- H2 title changed to text-3xl -->
+            <h2 class="text-3xl font-bold mb-10 text-center text-gray-800">
+                <span class="lang-kr">핵심 프로젝트 기록</span>
+                <span class="lang-en hidden-lang">Key Project Gallery</span>
             </h2>
-            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-                <span class="lang-kr">1981년에 구상된 'MVIP'의 핵심 거점들을 지도에서 확인하세요. 지도에 표시된 거점들을 클릭하면 해당 지역의 개념을 볼 수 있습니다. (배경 이미지는 대한민국 지도 위에 MVIP의 거점을 표시한 개념도입니다.)</span>
-                <span class="lang-en hidden-lang">Check the core points of the 'MVIP' conceptualized in 1981 on the map. Click the points on the map to see the concepts of Techno-Port, Valley, and Pole. (The background image is a conceptual map overlaid with the MVIP points on the map of South Korea.)</span>
-            </p>
-
-            <!-- Static Map Container with Interactive Overlays -->
-            <div class="vision-map-container mx-auto">
-                <!-- Map Points (Adjusted to be more geographically accurate on the clean map) -->
-                
-                <!-- P: Seoul/Incheon Pole (Center of Capital Region) - top: 30% -->
-                <div class="map-point pole-color" style="top: 30%; left: 40%;" 
-                     data-city="Seoul/Incheon Pole (P)" 
-                     data-concept="서울/인천 폴: 수도권 메가폴리스의 중심축, 첨단 연구 및 정책 결정 기능 집중"
-                     data-en-concept="Seoul/Incheon Pole: Central axis of the Capital Megalopolis, focused on high-tech research and policy functions.">P</div>
-                
-                <!-- V: Geumryung Valley (Daejeon/Sejong area) - top: 45% (Moved down 5% previously) -->
-                <div class="map-point valley-color" style="top: 45%; left: 48%;" 
-                     data-city="Geumryung Valley (V) - Daejeon" 
-                     data-concept="금룡 밸리 (대전): 한국의 실리콘 밸리 구상, 과학 기술 및 연구 개발의 중심지 (대덕연구단지 및 KAIST 포함)"
-                     data-en-concept="Geumryung Valley (Daejeon): Conceptualized as Korea's Silicon Valley, a center for science, technology, and R&D (including Daedeok Science Town and KAIST).">V</div>
-                
-                <!-- T-P: Jeju Techno-Port -->
-                <div class="map-point port-color" style="top: 90%; left: 35%;" 
-                     data-city="Jeju Techno-Port (T-P)" 
-                     data-concept="제주 테크노-포트: 국제 교류와 관광, 환경 과학을 융합하는 허브. IUCN 유치 및 자유시 계획"
-                     data-en-concept="Jeju Techno-Port: A hub fusing international exchange, tourism, and environmental science. Planned for IUCN hosting and Free City concept.">T-P</div>
-                
-                <!-- P: Chungcheong Pole (Mid-point, slightly East) - top: 40%, left: 35% -->
-                <div class="map-point pole-color" style="top: 40%; left: 35%;" 
-                     data-city="Chungcheong Pole (P)" 
-                     data-concept="충청권 폴 (중부): 국토 균형 발전 및 신행정 기능 분산의 축"
-                     data-en-concept="Chungcheong Pole (Central): Axis for balanced national development and decentralization of administrative functions.">P</div>
-                
-                <!-- T-P: Donghae Techno-Port (East Coast, Gangwon) - left: 65% -->
-                <div class="map-point port-color" style="top: 30%; left: 65%;" 
-                     data-city="Donghae Techno-Port (T-P)" 
-                     data-concept="동해 테크노-포트: 환동해 경제권 및 북방 교류의 전진 기지 (강릉/속초 지역)"
-                     data-en-concept="Donghae Techno-Port: A forward base for the East Sea economic zone and northern exchanges (Gangneung/Sokcho region).">T-P</div>
-                
-                <!-- V: Gyeongsang Valley (Daegu/Gyeongsan area) -->
-                <div class="map-point valley-color" style="top: 55%; left: 60%;" 
-                     data-city="Gyeongsang Valley (V) - Daegu" 
-                     data-concept="영남 밸리 (대구/경산): 산업 기술과 제조업 혁신의 중심지"
-                     data-en-concept="Yeongnam Valley (Daegu/Gyeongsan): Center for industrial technology and manufacturing innovation.">V</div>
-                
-                <!-- T-P: Ulsan Techno-Port - top: 55%, left: 69% -->
-                <div class="map-point port-color" style="top: 55%; left: 69%;" 
-                     data-city="Ulsan Techno-Port (T-P)" 
-                     data-concept="울산 테크노-포트: 중화학 공업과 첨단 산업의 연계"
-                     data-en-concept="Ulsan Techno-Port: Linkage between heavy chemical industry and advanced technology sectors.">T-P</div>
-                
-                <!-- T-P: Yeosu/Busan Techno-Port (Southern coast) - top: 65%, left: 58% -->
-                <div class="map-point port-color" style="top: 65%; left: 58%;" 
-                     data-city="Yeosu/Busan Techno-Port (T-P)" 
-                     data-concept="여수/부산 테크노-포트: 해양 산업 및 국제 물류, 남해안 관광 거점"
-                     data-en-concept="Southern coastal hub for marine industry, international logistics, and tourism.">T-P</div>
-            </div>
             
-            <!-- Legend for Map -->
-            <div class="mt-8 flex justify-center space-x-8 text-lg font-semibold">
-                <div class="flex items-center space-x-2">
-                    <span class="w-5 h-5 pole-color rounded-full"></span>
-                    <span>Pole (P)</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="w-5 h-5 port-color rounded-full"></span>
-                    <span>Techno-Port (T-P)</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="w-5 h-5 valley-color rounded-full"></span>
-                    <span>Valley (V)</span>
+            <!-- Animation Gallery Container -->
+            <div class="project-animation-gallery mx-auto mb-10 max-w-2xl">
+                <div id="slide-container">
+                    <!-- Slides are created dynamically in JS -->
+                    <div class="project-slide active" id="slide-0" style="background-image: url('https://github.com/ekwak22/kwaak/blob/main/148596_145820_550.jpg?raw=true');">
+                        <!-- Titles removed as requested -->
+                    </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- 2.5 DMZ Peace and Global Citizenship (New Section) -->
-        <section id="peace" class="mb-16 bg-white p-8 rounded-xl shadow-xl border-t-4 border-red-500">
-            <h2 class="text-3xl font-bold mb-4 text-red-800">
-                <span class="lang-kr">평화와 세계시민 운동</span>
-                <span class="lang-en hidden-lang">Peace and Global Citizenship Movement</span>
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-red-600">
-                        <span class="lang-kr">DMZ UN 평화시 구상 (1988~)</span>
-                        <span class="lang-en hidden-lang">DMZ UN Peace City Concept (1988~)</span>
-                    </h3>
-                    <p class="text-gray-700 leading-relaxed lang-kr">
-                        곽영훈 회장님의 비전은 분단 직후부터 시작된 DMZ 평화 도시 구상으로 이어집니다. 그는 DMZ를 단순한 분단의 상징이 아닌, 인류의 <span class="font-semibold">‘치유의 문명’ 및 ‘공존의 실험장’</span>으로 보고, DMZ 생태·문화평화공원 조성과 서부/중부/동부 3대 평화시 건설을 제안했습니다. 이 평화시는 UN 및 국제기구 유치, 이산가족 치유센터, 남북 청소년의 일터 등을 목표로 합니다.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed lang-en hidden-lang">
-                        His vision culminates in the DMZ Peace City concept, which started shortly after the division. He sees the DMZ not as a symbol of division, but as a <span class="font-semibold">'Civilization of Healing' and 'Laboratory for Coexistence'</span>. This project proposes creating a DMZ Eco-Culture Peace Park and three major Peace Cities (West, Central, East) to host UN bodies, healing centers for separated families, and workplaces for youth from both Koreas.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-3 text-red-600">
-                        <span class="lang-kr">WCO 세계시민기구 및 Silk Road Forum</span>
-                        <span class="lang-en hidden-lang">WCO World Citizens Organization and Silk Road Forum</span>
-                    </h3>
-                    <p class="text-gray-700 leading-relaxed lang-kr">
-                        세계시민기구(WCO: World Citizens Organization)는 국가, 이념, 종교를 초월해 인류가 <span class="font-semibold">'어울려 사는 세상(어. 울.려.사. 세.)'</span>을 만들고자 하는 곽영훈 회장님의 철학이 담긴 활동입니다. 매년 실크로드 도시 시장 포럼(Silk Road Mayors Forum)을 주최하여 동서양 도시 간의 교류와 협력을 증진하고, 환경 친화적이고 유산을 보존하는 지속 가능한 개발을 촉진하고 있습니다.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed lang-en hidden-lang">
-                        The WCO embodies his philosophy of creating a world where humanity 'lives in harmony together,' transcending nations, ideologies, and religions. Through the annual Silk Road Mayors Forum, he promotes exchange and cooperation between Eastern and Western cities, advocating for environmentally friendly and heritage-preserving sustainable development.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <!-- 3. Project Gallery Section (Based on IMG_1478.jpg) -->
-        <section id="projects" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">
-                <span class="lang-kr">주요 프로젝트: 40년의 기록 (1974-2014)</span>
-                <span class="lang-en hidden-lang">Key National Projects: 40 Years of Record (1974-2014)</span>
-            </h2>
-            <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <!-- Detailed List Section -->
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <!-- H3 title changed to text-xl -->
+                <h3 class="text-xl font-bold mb-6 text-gray-800">
+                    <span class="lang-kr">비전 철학 요약 및 상세 목록</span>
+                    <span class="lang-en hidden-lang">Vision Philosophy Summary & Detailed List</span>
+                </h3>
                 
-                <h3 class="text-2xl font-semibold mb-6 text-gray-800">
-                    <span class="lang-kr">대표 프로젝트 갤러리</span>
-                    <span class="lang-en hidden-lang">Featured Project Gallery</span>
-                </h3>
-
-                <!-- Project Image Gallery Grid (REMOVED) -->
-
-                <h3 class="text-2xl font-semibold mb-4 text-gray-800">
-                    <span class="lang-kr">대표 프로젝트 상세 목록</span>
-                    <span class="lang-en hidden-lang">Detailed Project List</span>
-                </h3>
-                <div class="grid md:grid-cols-3 gap-6 text-sm text-gray-700">
+                <div class="grid md:grid-cols-2 gap-8 text-base text-gray-700 mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
                     <div>
-                        <h4 class="font-bold text-lg text-blue-600 mb-2 border-b border-blue-200 pb-1">
+                        <!-- H4 title changed to text-lg -->
+                        <h4 class="font-bold text-lg text-blue-700 mb-2">비전 철학 요약</h4>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>정책 건축가 역할: 단순히 건물을 짓는 건축가를 넘어, 환경설계와 마스터 플랜(종합 계획)을 통해 국토의 개발과 보존 방향을 제시하는 '정책 건축가'로서 활동했습니다.</li>
+                            <li>활성 축과 녹지 축: 1971년부터 한반도의 국토 개발을 개발 중심의 활성 축 (지안~평양~서울~대전~여수)과 균형 및 보존 중심의 녹지 축 (백두산~한라산)으로 나누어 계획했습니다.</li>
+                            <li>글로벌 이벤트 접목: 서울 올림픽(88), 대전 엑스포(93), 여수 엑스포(12), 평창 동계올림픽(18) 등 글로벌 이벤트를 활성 축 개발의 촉매제로 활용하여 50년 전의 꿈을 현실화했습니다.</li>
+                            <li>인간 중심 설계: 도시 건설의 설계는 인간 생활 조건, 역사, 문화, 자연환경에 더해 평화(Peace) 환경 공간이 추가되어야 함을 강조하며, 이용자의 편리함과 공간의 조화를 최우선했습니다.</li>
+                            <li>정책 제안자 역할: 청계천 복원 아이디어 (미국 '빅 디그 ' 프로젝트 참고)와 서울시 버스 중앙차선제 (브라질 쿠리치바시 참고) 등을 당시 서울 시장에게 제안하여 실제 정책 실행으로 이어지게 했습니다.</li>
+                            <li>지역 균형 발전: 낙후 지역 발전을 위해 여수를 중심으로 호남권 개발에 집중했으며, 여수시청사를 전통 한옥으로 설계하려 하는 등 지역 고유의 문화 보존과 발전을 시도했습니다.</li>
+                            <li>문화/과학 인프라 구상: 서울 예술의 전당(서초동 우면산) 및 대덕연구단지/KAIST 설립 구상 등 과학기술과 문화 예술 인프라의 초기 위치 선정 및 계획에 참여하여 서울의 균형 발전에 기여했습니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <!-- H4 title changed to text-lg -->
+                        <h4 class="font-bold text-lg text-blue-700 mb-2">학력 및 주요 직책</h4>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>학력: MIT (Architecture), Harvard University (Policy & Education)</li>
+                            <li>주요 직책: (Current) Chairman of the People & Environment Group, President of UNA ROK, Founder/Representative of WCO</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 text-base text-gray-700 mt-8 pt-4 border-t border-gray-200">
+                    <div>
+                        <!-- H4 title changed to text-lg -->
+                        <h4 class="font-bold text-lg text-blue-600 mb-3 border-b-2 border-blue-100 pb-2">
                             <span class="lang-kr">서울 수도권</span>
                             <span class="lang-en hidden-lang">Seoul Metropolitan Area</span>
                         </h4>
-                        <ul class="list-disc ml-5 space-y-1">
+                        <ul class="list-disc ml-5 space-y-2">
                             <li><span class="lang-kr">서울시 최초 장기종합계획 (1974)</span><span class="lang-en hidden-lang">Seoul's First Long-Range Comprehensive Master Plan (1974)</span></li>
-                            <li><span class="lang-kr">지하철 2호선 순환형 기본 계획 (1977): 강남 개발 촉진의 핵심</span><span class="lang-en hidden-lang">Subway Line 2 Loop Concept (1977): Key to Gangnam's development.</span></li>
-                            <li><span class="lang-kr">한강 종합 개발 구상 (1981)</span><span class="lang-en hidden-lang">Han River Comprehensive Development Plan (1981)</span></li>
-                            <li><span class="lang-kr">서울 올림픽공원 설계 자문 (1988): 몽촌토성 보존 강조</span><span class="lang-en hidden-lang">Olympic Park Consultation (1988): Emphasizing preservation of Mongchon Earthen Fortress.</span></li>
-                            <li><span class="lang-kr">대학로 마로니에 공원 조성 (1974): 문화 예술 거리로의 전환</span><span class="lang-en hidden-lang">Daehangno Marronnier Park (1974): Transformation into a cultural art street.</span></li>
+                            <li><span class="lang-kr">지하철 2호선 순환형 기본 계획 (1977)</span><span class="lang-en hidden-lang">Subway Line 2 Loop Concept (1977)</span></li>
+                            <li><span class="lang-kr">한강 종합 개발 구상 (1981)</span><span class="lang-en hidden-lang">Han River Dev Plan (1981)</span></li>
+                            <li><span class="lang-kr">서울 올림픽공원 설계 자문 (1988)</span><span class="lang-en hidden-lang">Olympic Park Consultation (1988)</span></li>
+                            <li><span class="lang-kr">대학로 마로니에 공원 조성 (1974)</span><span class="lang-en hidden-lang">Daehangno Marronnier Park (1974)</span></li>
                             <li><span class="lang-kr">일산 신도시 계획 (1990)</span><span class="lang-en hidden-lang">Ilsan New Town Plan (1990)</span></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg text-blue-600 mb-2 border-b border-blue-200 pb-1">
+                        <!-- H4 title changed to text-lg -->
+                        <h4 class="font-bold text-lg text-blue-600 mb-3 border-b-2 border-blue-100 pb-2">
                             <span class="lang-kr">중부권/대전충청권</span>
                             <span class="lang-en hidden-lang">Central & Daejeon/Chungcheong Area</span>
                         </h4>
-                        <ul class="list-disc ml-5 space-y-1">
+                        <ul class="list-disc ml-5 space-y-2">
                             <li><span class="lang-kr">신 행정수도 마스터 플랜 (1970년대)</span><span class="lang-en hidden-lang">New Administrative Capital Master Plan (1970s)</span></li>
-                            <li><span class="lang-kr">대전 테크노폴리스 구상 (1991): 대덕연구단지 및 KAIST 설립 연계</span><span class="lang-en hidden-lang">Daejeon Technopolis Concept (1991): Linked to Daedeok Research Complex and KAIST.</span></li>
+                            <li><span class="lang-kr">대전 테크노폴리스 구상 (1991)</span><span class="lang-en hidden-lang">Daejeon Technopolis Concept (1991)</span></li>
                             <li><span class="lang-kr">1993 대전 엑스포 마스터 플랜</span><span class="lang-en hidden-lang">1993 Daejeon Expo Master Plan</span></li>
                             <li><span class="lang-kr">경부고속철도(KTX) 건설 기본 구상 (1982)</span><span class="lang-en hidden-lang">KTX High-Speed Rail Construction Concept (1982)</span></li>
                             <li><a href="#peace" class="text-blue-600 hover:underline"><span class="lang-kr">DMZ 통일 평화시 구상 (1988)</span><span class="lang-en hidden-lang">DMZ Unification Peace City Concept (1988)</span></a></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg text-blue-600 mb-2 border-b border-blue-200 pb-1">
+                        <!-- H4 title changed to text-lg -->
+                        <h4 class="font-bold text-lg text-blue-600 mb-3 border-b-2 border-blue-100 pb-2">
                             <span class="lang-kr">국제 및 남해안권</span>
                             <span class="lang-en hidden-lang">International & Southern Coastal Area</span>
                         </h4>
-                        <ul class="list-disc ml-5 space-y-1">
-                            <li><span class="lang-kr">2012 여수 엑스포 유치위원회 위원장</span><span class="lang-en hidden-lang">Chairman of 2012 Yeosu Expo Bid Committee</span></li>
+                        <ul class="list-disc ml-5 space-y-2">
+                            <li><span class="lang-kr">2012 여수 엑스포</span><span class="lang-en hidden-lang">2012 Yeosu Expo</span></li>
                             <li><span class="lang-kr">제주도 종합개발 및 IUCN 유치 계획</span><span class="lang-en hidden-lang">Jeju Island Development & IUCN Hosting Plan</span></li>
-                            <li><span class="lang-kr">해외 도시 계획 참여: 이집트 시나이 과학 문명 도시, 네팔 룸비니 세계평화시 등</span><span class="lang-en hidden-lang">International Projects: Sinai Science City (Egypt), Lumbini World Peace City (Nepal), etc.</span></li>
+                            <li><span class="lang-kr">해외 도시 계획 참여</span><span class="lang-en hidden-lang">International Projects participation</span></li>
                             <li><span class="lang-kr">순천만 에코폴리스 계획 (1990s)</span><span class="lang-en hidden-lang">Suncheon Bay Ecopolis Plan (1990s)</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- 4. Vision Map Section (MVIP Elaboration) -->
+        <section id="vision" class="mb-20 py-12 bg-gray-50 rounded-xl shadow-inner">
+            <!-- H2 title changed to text-3xl -->
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+                <span class="lang-kr">MVIP: 1981 국토 비전 상세 (Techno-Cultra-Network)</span>
+                <span class="lang-en hidden-lang">MVIP: 1981 National Vision Details (Techno-Cultra-Network)</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-10">
+                <div class="space-y-4 text-gray-700 p-4 border-l-4 border-blue-500 bg-white shadow-sm rounded-lg">
+                    <!-- H3 title changed to text-xl -->
+                    <h3 class="text-xl font-bold text-blue-700">활성 축 (Active Axis)과 개발 전략</h3>
+                    <p class="lang-kr">MVIP는 활성 축을 설정하여 북한 평양부터 서울, 대전, 여수까지 직선으로 연결되는 거점 지역의 개발을 구상했습니다. 이 축을 따라 1988 서울 올림픽, 1993 대전 엑스포 같은 글로벌 이벤트를 전략적으로 접목하여 국내 인프라 구축과 국가 발전의 촉매제로 활용했습니다. 특히 서울 지하철 2호선 순환선은 강남 개발을 촉진하며 이 활성 축의 핵심이 되었습니다.</p>
+                    <p class="lang-en hidden-lang">The MVIP established the Active Axis, conceiving development centers along a straight line connecting Pyongyang, Seoul, Daejeon, and Yeosu. Global events like the 1988 Seoul Olympics were strategically integrated along this axis to act as catalysts for national infrastructure and growth. The Seoul Subway Line 2 loop was key in accelerating Gangnam's development along this core axis.</p>
+                </div>
+                <div class="space-y-4 text-gray-700 p-4 border-l-4 border-green-500 bg-white shadow-sm rounded-lg">
+                    <!-- H3 title changed to text-xl -->
+                    <h3 class="text-xl font-bold text-green-700">녹지 축 (Green Axis)과 보존 철학</h3>
+                    <p class="lang-kr">녹지 축은 백두산에서 한라산까지 이어지는 백두대간을 중심으로 설정되었으며, 이는 개발과 보존 사이의 균형을 유지하기 위한 핵심 축입니다. 이 축은 무분별한 도시 확산과 환경 훼손을 예방하고, 국토의 자연환경과 역사적 가치(예: 올림픽 공원 내 몽촌토성 보존)를 인간 생활 조건에 통합시키는 '환경 설계' 철학을 반영합니다.</p>
+                    <p class="lang-en hidden-lang">The Green Axis centered on the Baekdu-Daegan mountain range, extending from Baekdu to Halla Mountain. It serves as the core axis for balancing development with conservation, preventing urban sprawl and environmental damage. This axis reflects the 'Environmental Design' philosophy, integrating the nation's natural heritage (e.g., preserving Mongchon Earthen Fortress within Olympic Park) with human living conditions.</p>
+                </div>
+            </div>
+            
+
+            <!-- Static Map Container with Interactive Overlays -->
+            <div class="vision-map-container mx-auto mt-10">
+                <!-- Map Points (Optimized positions) -->
+                <div class="map-point pole-color" style="top: 30%; left: 40%;" data-city="Seoul/Incheon Pole (P)" data-concept="서울/인천 폴: 수도권 중심축" data-en-concept="Seoul/Incheon Pole: Capital Axis">P</div>
+                <div class="map-point valley-color" style="top: 45%; left: 48%;" data-city="Geumryung Valley (V)" data-concept="금룡 밸리 (대전): 과학 기술 중심" data-en-concept="Geumryung Valley (Daejeon): Science Hub">V</div>
+                <div class="map-point port-color" style="top: 90%; left: 35%;" data-city="Jeju Techno-Port (T-P)" data-concept="제주 테크노-포트: 국제 교류" data-en-concept="Jeju Techno-Port: Int'l Exchange">T-P</div>
+                <div class="map-point pole-color" style="top: 40%; left: 35%;" data-city="Chungcheong Pole (P)" data-concept="충청권 폴: 국토 균형 발전" data-en-concept="Chungcheong Pole: Balanced Growth">P</div>
+                <div class="map-point port-color" style="top: 30%; left: 65%;" data-city="Donghae Techno-Port (T-T)" data-concept="동해 테크노-포트: 북방 교류" data-en-concept="Donghae Techno-Port: Northern Exchange">T-T</div>
+                <div class="map-point valley-color" style="top: 55%; left: 60%;" data-city="Gyeongsang Valley (V)" data-concept="영남 밸리: 산업 기술" data-en-concept="Yeongnam Valley: Industrial Tech">V</div>
+                <div class="map-point port-color" style="top: 55%; left: 69%;" data-city="Ulsan Techno-Port (T-P)" data-concept="울산 테크노-포트: 중화학 연계" data-en-concept="Ulsan Techno-Port: Heavy Industry">T-P</div>
+                <div class="map-point port-color" style="top: 65%; left: 58%;" data-city="Yeosu/Busan Techno-Port (T-P)" data-concept="여수/부산 테크노-포트: 해양 산업" data-en-concept="Yeosu/Busan Techno-Port: Marine Industry">T-P</div>
+            </div>
+        </section>
+        
+        <!-- 5. Peace Section (Elaborated) -->
+        <section id="peace" class="mb-16 bg-white p-12 rounded-xl shadow-lg border border-gray-100">
+            <!-- H2 title changed to text-3xl -->
+            <h2 class="text-3xl font-bold mb-8 text-red-800 text-center">
+                <span class="lang-kr">평화와 세계시민 운동</span>
+                <span class="lang-en hidden-lang">Peace & Global Citizenship Movement</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="p-6 border-l-4 border-red-400 bg-red-50 rounded-lg">
+                    <!-- H3 title changed to text-xl -->
+                    <h3 class="text-xl font-bold mb-2 text-red-700">DMZ UN Peace City</h3>
+                    <p class="lang-kr text-gray-700">DMZ를 단순한 분단의 상징이 아닌, 인류의 '치유의 문명' 및 '공존의 실험장'으로 전환하여 UN 및 국제기구 유치를 목표로 하는 구상입니다.</p>
+                    <p class="lang-en hidden-lang text-gray-700">The concept aims to transform the DMZ from a symbol of division into a 'Civilization of Healing' and a 'Laboratory for Coexistence,' intending to host the UN and other international organizations.</p>
+                </div>
+                <div class="p-6 border-l-4 border-blue-400 bg-blue-50 rounded-lg">
+                    <!-- H3 title changed to text-xl -->
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">WCO (World Citizens Organization)와 냉전 종식</h3>
+                    <p class="lang-kr text-gray-700">WCO는 1987년 서울 올림픽 보이콧 위기를 극복하기 위한 민간 외교에서 출발했습니다. 곽 회장님은 532명의 세계 지도자(테레사 수녀, 레이건, 고르바초프 등)의 서명을 받아 올림픽을 평화의 장으로 만들었습니다. 이 성공은 냉전 종식(1991년)에 기여한 '세계 시민의 승리'로 평가받으며, WCO는 이후 '어울려 사는 세상'을 모토로 실크로드 시장 포럼 등 글로벌 활동을 이어가고 있습니다.</p>
+                    <p class="lang-en hidden-lang text-gray-700">WCO originated from private diplomacy efforts to overcome the 1987 Seoul Olympics boycott crisis. Kwaak secured signatures from 532 world leaders (including Mother Teresa, Reagan, and Gorbachev) to ensure the Games were held in peace. This success, credited as a 'Victory of World Citizens,' contributed to ending the Cold War (1991). WCO continues to promote the motto 'Live in Harmony' via global initiatives like the Silk Road Mayors Forum.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Modal for Map Point Details -->
+    <!-- Modal (Hidden) -->
     <div id="pointModal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-[100]">
         <div class="bg-white p-8 rounded-xl max-w-lg w-full shadow-2xl">
             <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-blue-700"></h3>
@@ -404,13 +362,10 @@
     <footer class="bg-gray-800 text-white py-8 mt-12">
         <div class="container-xl mx-auto px-4 text-center">
             <p>&copy; 2024. Kwaak Young-hoon Vision Archive. All Rights Reserved.</p>
-            <p class="text-sm text-gray-400 mt-2">
-                <span class="lang-kr">Powered by the national planning vision of 곽영훈.</span>
-                <span class="lang-en hidden-lang">Powered by the national planning vision of Kwaak Young-hoon.</span>
-            </p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
         const STORAGE_KEY = 'kwak_lang';
         const modal = document.getElementById('pointModal');
@@ -419,88 +374,110 @@
         const modalConceptEN = document.getElementById('modalConceptEN');
         const mapPoints = document.querySelectorAll('.map-point'); 
         const langButtons = document.querySelectorAll('.lang-button');
+        const slideContainer = document.getElementById('slide-container');
 
-        // Function to toggle language visibility
+        // Project Animation Data (Updated list with 10 projects and new GitHub Raw links)
+        const projectsData = [
+            // Seoul Projects
+            { kr: '서울시 장기종합계획', en: 'Seoul Master Plan', img: 'https://github.com/ekwak22/kwaak/blob/main/148596_145820_550.jpg?raw=true' },
+            { kr: '지하철 2호선 순환형', en: 'Subway Line 2 Loop Concept', img: 'https://github.com/ekwak22/kwaak/blob/main/148596_145821_627.jpg?raw=true' },
+            { kr: '한강 종합 개발 구상', en: 'Han River Development Plan', img: 'https://github.com/ekwak22/kwaak/blob/main/148596_145823_737.jpg?raw=true' },
+            { kr: '서울 올림픽공원 자문', en: 'Olympic Park Consultation', img: 'https://github.com/ekwak22/kwaak/blob/main/148596_145824_824.jpg?raw=true' },
+            { kr: '대학로 마로니에 공원', en: 'Daehangno Marronnier Park', img: 'https://github.com/ekwak22/kwaak/blob/main/148596_145825_858.jpg?raw=true' },
+            { kr: '일산 신도시 계획', en: 'Ilsan New Town Plan', img: 'https://github.com/ekwak22/kwaak/blob/main/148596_145828_1236.jpg?raw=true' },
+            
+            // Central/Global Projects (Expanded from previous versions based on provided links)
+            { kr: '신 행정수도 마스터 플랜', en: 'New Administrative Capital Plan', img: 'https://github.com/ekwak22/kwaak/blob/main/148596_145829_1425.jpg?raw=true' },
+            { kr: '2012 여수 엑스포', en: '2012 Yeosu Expo', img: 'https://github.com/ekwak22/kwaak/blob/main/Yeosu-Expo-2012-10-2000x1411.jpg?raw=true' },
+            { kr: '순천만 에코폴리스', en: 'Suncheon Bay Ecopolis Plan', img: 'https://github.com/ekwak22/kwaak/blob/main/korea-143647.jpg?raw=true' },
+            { kr: '경부고속철도 구상', en: 'KTX High-Speed Rail Concept', img: 'https://github.com/ekwak22/kwaak/blob/main/subway-map-eng-th.jpg?raw=true' } // Using subway map for infrastructure theme
+        ];
+
+        let currentSlideIndex = 0;
+        const totalSlides = projectsData.length;
+
+        // Function to create slides dynamically
+        function createSlides() {
+            slideContainer.innerHTML = ''; // Clear existing content
+            projectsData.forEach((data, index) => {
+                const slide = document.createElement('div');
+                slide.className = `project-slide ${index === 0 ? 'active' : ''}`;
+                slide.id = `slide-${index}`;
+                // Set the image URL 
+                slide.style.backgroundImage = `url('${data.img}')`;
+                slide.innerHTML = ``; // Titles removed
+                slideContainer.appendChild(slide);
+            });
+        }
+
+        // Function to change the slide with animation
+        function changeSlide() {
+            const currentActiveSlide = document.querySelector('.project-slide.active');
+            if (currentActiveSlide) {
+                currentActiveSlide.classList.remove('active');
+            }
+
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            const nextActiveSlide = document.getElementById(`slide-${currentSlideIndex}`);
+            if (nextActiveSlide) {
+                nextActiveSlide.classList.add('active');
+            }
+
+            // Ensure correct language is applied to the new slide text
+            const currentLang = localStorage.getItem(STORAGE_KEY) || 'kr';
+            setLanguage(currentLang);
+        }
+
+        // Initialize slides and start animation timer
+        function startProjectAnimation() {
+            createSlides();
+            // Start the interval after slides are created
+            setInterval(changeSlide, 4000); // Change every 4 seconds
+        }
+
+
+        // Language Function
         function setLanguage(lang) {
-            // Store preference
             localStorage.setItem(STORAGE_KEY, lang);
-
-            // Toggle active button class
-            langButtons.forEach(btn => {
+            document.querySelectorAll('.lang-button').forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.id === `lang-${lang}-btn`) {
-                    btn.classList.add('active');
-                }
+                if (btn.id === `lang-${lang}-btn`) btn.classList.add('active');
             });
-
-            // Iterate through all language spans/paragraphs and toggle visibility
-            document.querySelectorAll('.lang-kr').forEach(el => {
-                el.classList.toggle('hidden-lang', lang !== 'kr');
-            });
-            document.querySelectorAll('.lang-en').forEach(el => {
-                el.classList.toggle('hidden-lang', lang !== 'en');
-            });
-
-            // Update document lang attribute for accessibility
-            document.documentElement.lang = lang === 'kr' ? 'ko' : 'en';
+            document.querySelectorAll('.lang-kr').forEach(el => el.classList.toggle('hidden-lang', lang !== 'kr'));
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden-lang', lang !== 'en'));
         }
         
-        // Function to open the modal (adapts to current language)
+        // Modal Functions
         function openModal(city, conceptKR, conceptEN) {
             const currentLang = localStorage.getItem(STORAGE_KEY) || 'kr';
-
-            // Set Title (City Name is dual language already in data-city)
             modalTitle.textContent = city;
-
-            // Set Concept text (prefixed with the language label inside the modal)
             modalConceptKR.innerHTML = `<span class="font-semibold text-gray-900">핵심 개념:</span> ${conceptKR}`;
             modalConceptEN.innerHTML = `<span class="font-semibold text-gray-900">Core Concept:</span> ${conceptEN}`;
-
-            // Ensure the correct concept is visible within the modal
             modalConceptKR.classList.toggle('hidden-lang', currentLang !== 'kr');
             modalConceptEN.classList.toggle('hidden-lang', currentLang !== 'en');
-
             modal.classList.add('open');
         }
+        function closeModal() { modal.classList.remove('open'); }
 
-        // Function to close the modal
-        function closeModal() {
-            modal.classList.remove('open');
-        }
-
-        // Initialize language on page load
+        // Init
         document.addEventListener('DOMContentLoaded', () => {
-            let defaultLang = 'kr'; // Default to Korean if no preference is set
-            
-            // Check for stored preference
-            const storedLang = localStorage.getItem(STORAGE_KEY);
-            if (storedLang) {
-                defaultLang = storedLang;
-            } else if (navigator.language && navigator.language.startsWith('en')) {
-                // If browser language is English, default to English
-                defaultLang = 'en';
-            }
-            
+            let defaultLang = localStorage.getItem(STORAGE_KEY) || 'kr';
             setLanguage(defaultLang);
+            startProjectAnimation(); // Start the new animation gallery
         });
 
-
-        // Add event listeners to all map points (This listener now handles all map sections)
-        mapPoints.forEach(point => {
+        // Map Click Events
+        document.querySelectorAll('.map-point').forEach(point => {
             point.addEventListener('click', () => {
-                const city = point.getAttribute('data-city');
-                const conceptKR = point.getAttribute('data-concept');
-                const conceptEN = point.getAttribute('data-en-concept');
-                openModal(city, conceptKR, conceptEN);
+                openModal(
+                    point.getAttribute('data-city'),
+                    point.getAttribute('data-concept'),
+                    point.getAttribute('data-en-concept')
+                );
             });
         });
-
-        // Close modal when clicking outside (on the overlay)
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
+        
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
     </script>
 </body>
