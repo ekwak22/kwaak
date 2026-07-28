@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/classical-6c0fe2e1-130c-4491-a2cc-cfcc50cd3f00/styles.css">
+<style>
+  body { margin:0; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-600); }
+</style>
+</helmet>
+<div style="font-family:var(--font-body); background:var(--color-bg); color:var(--color-text);">
+
+  <nav class="nav" style="background:var(--color-bg);">
+    <a href="Kwaak YoungHoon Legacy Site.dc.html" class="nav-brand" style="text-decoration:none;">{{ t.brand }}</a>
+    <a href="Kwaak YoungHoon Legacy Site.dc.html">{{ t.backLink }}</a>
+    <a href="Kwaak YoungHoon Projects.dc.html">{{ t.projectsLink }}</a>
+    <button onclick="{{ toggleLang }}" style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:14px; background:var(--color-bg); color:var(--color-accent); border:1px solid var(--color-accent); border-radius:var(--radius-md); padding:7px 16px; cursor:pointer;">{{ t.langButton }}</button>
+  </nav>
+
+  <!-- INTRO -->
+  <section style="padding:var(--space-8) 8vw var(--space-6); border-bottom:1px solid var(--color-divider);">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:260px 1fr; gap:var(--space-8);">
+      <div>
+        <h6 style="color:var(--color-accent); margin-bottom:var(--space-2);">{{ t.bio.kicker }}</h6>
+        <h2 style="margin-top:var(--space-1);">{{ t.bio.heading }}</h2>
+        <figure style="margin:var(--space-6) 0 0;">
+          <img src="assets/kwaak-kim-library-2021.png" alt="Dr. KWAAK YoungHoon (seated) and Professor KIM Kwangsoo at Professor KIM's library, 2021" style="width:100%; border:6px solid var(--color-surface); outline:1px solid var(--color-divider); box-shadow:var(--shadow-sm); filter:sepia(0.22) saturate(0.82) contrast(1.05);">
+          <figcaption>{{ t.bio.photoCaption }}</figcaption>
+        </figure>
+      </div>
+      <div>
+        <p style="font-size:19px; line-height:1.75; text-align:justify; margin:0 0 var(--space-6);">{{ t.bio.paragraph }}</p>
+        <hr class="hr">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:var(--space-6); margin-top:var(--space-4);">
+          <sc-for list="{{ t.bio.facts }}" as="fact" hint-placeholder-count="4">
+            <div>
+              <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:28px; color:var(--color-accent);">{{ fact.value }}</div>
+              <div style="font-size:13px; color:var(--color-text); opacity:0.65; margin-top:4px;">{{ fact.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EARLY LIFE TIMELINE -->
+  <section style="padding:var(--space-8) 8vw;">
+    <div style="max-width:1000px; margin:0 auto var(--space-8);">
+      <h6 style="color:var(--color-accent);">{{ t.early.kicker }}</h6>
+      <h2 style="margin-top:var(--space-1); max-width:700px;">{{ t.early.heading }}</h2>
+    </div>
+    <div style="max-width:1000px; margin:0 auto; position:relative;">
+      <div style="position:absolute; left:112px; top:8px; bottom:8px; width:1px; background:var(--color-divider);"></div>
+      <sc-for list="{{ t.early.items }}" as="item" hint-placeholder-count="3">
+        <div style="display:grid; grid-template-columns:112px 1fr; gap:var(--space-6); padding:0 0 var(--space-6); position:relative;">
+          <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; color:var(--color-accent); padding-top:2px; text-align:right;">{{ item.year }}</div>
+          <div style="position:relative; padding-left:var(--space-4);">
+            <div style="position:absolute; left:-6px; top:7px; width:11px; height:11px; border-radius:50%; background:var(--color-bg); border:2px solid var(--color-accent);"></div>
+            <h3 style="margin:0 0 var(--space-2);">{{ item.title }}</h3>
+            <p style="font-size:15px; line-height:1.7; text-align:justify; margin:0; max-width:620px; opacity:0.85;">{{ item.body }}</p>
+            <sc-if value="{{ item.hasImage }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ item.imageUrl }}" alt="{{ item.title }}" style="width:280px; max-width:100%; margin-top:var(--space-3); border:6px solid var(--color-surface); outline:1px solid var(--color-divider); box-shadow:var(--shadow-sm); filter:sepia(0.22) saturate(0.82) contrast(1.05);">
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- WCO / PEACE -->
+  <section style="padding:var(--space-8) 8vw; background:var(--color-surface); border-top:1px solid var(--color-divider);">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8);">
+      <div>
+        <h6 style="color:var(--color-accent);">{{ t.peace.kicker }}</h6>
+        <h2 style="margin:var(--space-1) 0 var(--space-4);">{{ t.peace.heading }}</h2>
+        <p style="font-size:17px; line-height:1.75; text-align:justify; opacity:0.85;">{{ t.peace.paragraph }}</p>
+      </div>
+      <div>
+        <sc-for list="{{ t.peace.roles }}" as="role" hint-placeholder-count="5">
+          <div class="card" style="border-radius:0; border-left:0; border-right:0; border-top:0; padding:var(--space-3) 0;">
+            <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:18px;">{{ role.title }}</div>
+            <div style="font-size:13px; opacity:0.65;">{{ role.detail }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding:var(--space-6) 8vw; background:var(--color-surface); border-top:1px solid var(--color-divider);">
+    <div style="max-width:1100px; margin:0 auto; font-size:12px; opacity:0.55;">{{ t.footer }}</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+
+  content = {
+    en: {
+      brand: 'KWAAK YoungHoon',
+      backLink: '← Home',
+      projectsLink: 'Projects',
+      langButton: '한국어',
+      bio: {
+        kicker: 'Biography',
+        heading: 'A fifty-year journey of dreams',
+        photoCaption: 'Dr. KWAAK YoungHoon (seated) and Professor KIM Kwangsoo, 2021',
+        paragraph: 'Born into the ruins of the Korean War, KWAAK YoungHoon decided as a teenager to devote his life to rebuilding his country. He studied architecture, planning, political science, landscape architecture, and education in the United States — at MIT and Harvard — before returning home to help design the physical and civic infrastructure of modern Korea. For over fifty years he has shaped the events, streets, parks, and systems that define how Koreans live, move, and gather, working across eight presidential administrations without ever holding formal office.',
+        facts: [
+          { value: '50+', label: 'Years shaping Korea\u2019s development' },
+          { value: '8', label: 'Presidential administrations advised' },
+          { value: '4', label: 'Olympics & World Expos conceptualized' },
+          { value: '9th Dan', label: 'Taekwondo Grand Master' },
+        ],
+      },
+      early: {
+        kicker: 'Early Life',
+        heading: 'From a war-scarred country to a world stage',
+        items: [
+          { year: '1958', title: 'A promise made at home', body: 'As a middle school student, he resolved with his older brother to devote his life to Korea\u2019s development — his brother would shape policy, he would shape the physical sites where people live.' },
+          { year: '1962', title: 'Operation VISTA to the United States', body: 'Selected as a Korean delegate to a Red Cross–White House youth exchange program, he saw American development firsthand and set out to bring that progress home — traveling alongside a young Ban Ki-moon.', imageUrl: 'assets/vista-delegation-1962.png' },
+          { year: '1960s\u201370s', title: 'MIT and Harvard: the "A.P.P.L.E." years', body: 'He studied Architecture and Planning at MIT, then Political Science and Education at Harvard — a course of study a Boston Globe profile nicknamed "A.P.P.L.E." for the disciplines it spanned.' },
+        ],
+      },
+      peace: {
+        kicker: 'World Citizens & Peace',
+        heading: 'A lifelong peace movement',
+        paragraph: 'Having experienced the Korean War as a child, KWAAK YoungHoon has spent his life building bridges instead of walls — founding organizations, leading civic movements, and carrying a black belt\u2019s discipline into decades of diplomacy.',
+        roles: [
+          { title: 'World Citizens Organization (WCO)', detail: 'Founder & President — founded 1987' },
+          { title: 'UN Association of the Republic of Korea', detail: 'President' },
+          { title: 'Taekwondo, 9th-degree Black Belt', detail: 'Grand Master, leading its globalization' },
+          { title: 'Happiness Inexperience & Sharing Movement (THIS)', detail: 'Co-President' },
+          { title: 'International Buddhist Confederation, Delhi', detail: 'Global Advisor' },
+        ],
+      },
+      footer: '\u00A9 KWAAK YoungHoon. Content drawn from "Miracle on the Han River: A Long Journey of Dreams" (Gimm-Young Publishers, 2021).',
+    },
+    ko: {
+      brand: '곽영훈',
+      backLink: '← 홈으로',
+      projectsLink: '프로젝트',
+      langButton: 'English',
+      bio: {
+        kicker: '약력',
+        heading: '반세기에 걸친 꿈의 대장정',
+        photoCaption: '곽영훈 박사(앉음)와 김광수 교수, 2021년',
+        paragraph: '한국전쟁의 폐허 속에서 태어난 곽영훈은 십 대 시절 조국의 재건에 삶을 바치기로 결심했다. 미국 MIT와 하버드에서 건축, 도시계획, 정책학, 조경, 교육학을 공부한 뒤 귀국하여 현대 한국의 물리적·시민적 기반을 설계하는 일에 뛰어들었다. 지난 50여 년간 그는 공식 관직을 맡은 적 없이 여덟 정권을 넘나들며, 한국인의 삶과 이동, 만남의 방식을 정의하는 행사와 거리, 공원, 시스템을 만들어왔다.',
+        facts: [
+          { value: '50+', label: '대한민국 발전을 이끈 세월' },
+          { value: '8', label: '자문한 대통령 정권' },
+          { value: '4', label: '기획한 올림픽·엑스포' },
+          { value: '9단', label: '태권도 그랜드마스터' },
+        ],
+      },
+      early: {
+        kicker: '어린 시절',
+        heading: '전쟁의 상흔이 남은 나라에서 세계 무대로',
+        items: [
+          { year: '1958', title: '집에서 세운 다짐', body: '중학생이었던 그는 형과 함께 조국 발전에 삶을 바치기로 결심했다 — 형은 정책의 틀을, 그는 삶의 터전을 만들기로.' },
+          { year: '1962', title: '미국 VISTA 교환 프로그램', body: '적십자·백악관이 공동 주최한 청소년 교환 프로그램의 한국 대표로 선발되어 미국의 발전상을 직접 목격했고, 훗날 유엔 사무총장이 된 반기문과 함께 미국을 여행했다.', imageUrl: 'assets/vista-delegation-1962.png' },
+          { year: '1960~70년대', title: 'MIT와 하버드, "A.P.P.L.E."의 시절', body: 'MIT에서 건축과 도시계획을, 하버드에서 정책학과 교육학을 공부했다 — 보스턴 글로브는 그의 학문 분야를 "A.P.P.L.E."라 이름 붙였다.' },
+        ],
+      },
+      peace: {
+        kicker: '세계시민과 평화',
+        heading: '평생에 걸친 평화운동',
+        paragraph: '어린 시절 한국전쟁을 겪은 곽영훈은 평생 벽 대신 다리를 놓는 일에 힘써왔다 — 여러 단체를 창설하고 시민운동을 이끌며, 태권도인의 규율을 수십 년간의 외교 활동 속에 녹여냈다.',
+        roles: [
+          { title: '세계시민기구(WCO)', detail: '창설자 겸 회장 — 1987년 창설' },
+          { title: 'UN한국협회', detail: '회장' },
+          { title: '태권도 9단', detail: '그랜드마스터, 세계화 주도' },
+          { title: '(사)참행복나눔운동본부', detail: '공동대표' },
+          { title: '델리 국제불교연맹(IBC)', detail: 'Global Advisor' },
+        ],
+      },
+      footer: '© 곽영훈. 본 콘텐츠는 『한강의 기적: 그 꿈의 대장정』(김영사, 2021)을 바탕으로 합니다.',
+    },
+  };
+
+  renderVals() {
+    const lang = this.state.lang;
+    if (!this._tCache) this._tCache = {};
+    if (!this._tCache[lang]) {
+      const t = this.content[lang];
+      this._tCache[lang] = {
+        ...t,
+        early: { ...t.early, items: t.early.items.map(item => ({ ...item, hasImage: !!item.imageUrl })) },
+      };
+    }
+    return {
+      t: this._tCache[lang],
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'en' ? 'ko' : 'en' })),
+    };
+  }
+}
+</script>
+</body>
+</html>
