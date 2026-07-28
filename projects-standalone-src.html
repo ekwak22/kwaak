@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#f3f2f2">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f3f2f2"/>
+    <text x="600" y="380" font-family="Georgia, serif" font-size="90" fill="#b68235" text-anchor="middle">KWAAK</text>
+    <text x="600" y="470" font-family="Georgia, serif" font-size="40" fill="#201f1d" text-anchor="middle">YoungHoon</text>
+  </svg>
+</template>
+<meta name="ext-resource-dependency" content="https://unpkg.com/react@18.3.1/umd/react.production.min.js" data-resource-id="https://unpkg.com/react@18.3.1/umd/react.production.min.js" />
+<meta name="ext-resource-dependency" content="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" data-resource-id="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" />
+<meta name="ext-resource-dependency" content="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" data-resource-id="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" />
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="../_ds/classical-6c0fe2e1-130c-4491-a2cc-cfcc50cd3f00/styles.css">
+<style>
+  body { margin:0; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-600); }
+</style>
+</helmet>
+<div style="font-family:var(--font-body); background:var(--color-bg); color:var(--color-text);">
+
+  <nav class="nav" style="background:var(--color-bg);">
+    <a href="index.html" class="nav-brand" style="text-decoration:none;">{{ t.brand }}</a>
+    <a href="index.html">{{ t.backLink }}</a>
+    <a href="bio.html">{{ t.bioLink }}</a>
+    <button onclick="{{ toggleLang }}" style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:14px; background:var(--color-bg); color:var(--color-accent); border:1px solid var(--color-accent); border-radius:var(--radius-md); padding:7px 16px; cursor:pointer;">{{ t.langButton }}</button>
+  </nav>
+
+  <!-- INTRO -->
+  <section data-screen-label="Projects Intro" style="padding:var(--space-8) 8vw var(--space-6); border-bottom:1px solid var(--color-divider);">
+    <div style="max-width:820px;">
+      <h6 style="color:var(--color-accent);">{{ t.intro.kicker }}</h6>
+      <h1 style="font-size:clamp(36px,5vw,58px); margin:var(--space-2) 0 var(--space-4);">{{ t.intro.heading }}</h1>
+      <p style="font-size:18px; line-height:1.75; text-align:justify; opacity:0.85;">{{ t.intro.paragraph }}</p>
+    </div>
+  </section>
+
+  <sc-for list="{{ t.blocks }}" as="block" hint-placeholder-count="8">
+    <sc-if value="{{ block.isHeader }}" hint-placeholder-val="{{ false }}">
+      <section style="padding:var(--space-8) 8vw 0;">
+        <div style="max-width:1200px; margin:0 auto;">
+          <h6 style="color:var(--color-accent); margin-bottom:var(--space-2);">{{ block.kicker }}</h6>
+          <h2 style="margin:0 0 var(--space-6); max-width:700px;">{{ block.heading }}</h2>
+        </div>
+      </section>
+    </sc-if>
+    <sc-if value="{{ block.isProject }}" hint-placeholder-val="{{ false }}">
+      <section style="padding:0 8vw; {{ block.borderStyle }}">
+        <div style="max-width:800px; margin:0 auto; padding-bottom:var(--space-8);">
+          <div>
+            <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:16px; color:var(--color-accent); margin-bottom:var(--space-1);">{{ block.year }}</div>
+            <h3 style="margin:0 0 var(--space-2); font-size:26px;">{{ block.title }}</h3>
+            <p style="font-size:16px; line-height:1.75; text-align:justify; margin:0; opacity:0.85;">{{ block.description }}</p>
+          </div>
+        </div>
+      </section>
+    </sc-if>
+  </sc-for>
+
+  <!-- FOOTER -->
+  <footer style="padding:var(--space-6) 8vw; background:var(--color-surface);">
+    <div style="max-width:1200px; margin:0 auto; font-size:12px; opacity:0.55;">{{ t.footer }}</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+
+  content = {
+    en: {
+      brand: 'KWAAK YoungHoon',
+      backLink: '← Home',
+      bioLink: 'Biography',
+      langButton: '한국어',
+      intro: {
+        kicker: 'Projects in Detail',
+        heading: 'Half a century of national projects',
+        paragraph: 'From the master visions he sketched in the 1970s (M.V.I.P. I–III) to the mega-events and infrastructure that followed, KWAAK YoungHoon\u2019s work spans global events, the capital region, national infrastructure, and cross-border peace planning across Northeast Asia. Each project below traces a piece of the bigger picture he began drawing half a century ago.',
+      },
+      groups: [
+        {
+          kicker: 'Korea',
+          heading: 'Building the nation, project by project',
+          projects: [
+            { imageId: 'proj-olympics-1988', imagePlaceholder: 'Photo — 1988 Seoul Olympics', year: '1988', title: 'Seoul Olympic Games', description: 'Under his 1971 Master Vision and Implementation Plan, KWAAK YoungHoon helped conceive the infrastructure and civic vision behind Korea\u2019s Olympic debut on the world stage.' },
+            { imageId: 'proj-expo-1993', imagePlaceholder: 'Photo — 1993 Daejeon Expo', year: '1993', title: 'Daejeon Expo', description: 'Korea\u2019s first World Expo, conceptualized as a bold leap into the future — showcasing the country\u2019s technological ambitions and cementing Daejeon\u2019s role as a hub of science and research.' },
+            { imageId: 'proj-worldcup-2002', imagePlaceholder: 'Photo — 2002 World Cup', year: '2002', title: 'FIFA World Cup', description: 'One of the Global Mega Events envisioned in his early master plans, co-hosted with Japan and marking another milestone in Korea\u2019s emergence on the world stage.' },
+            { imageId: 'proj-expo-2012', imagePlaceholder: 'Photo — 2012 Yeosu Expo', year: '2012', title: 'Yeosu Expo', description: 'Fifty years after first falling for the port city, he helped bring the World Expo to Yeosu — a path toward balance and harmony between land and sea, and between Korea\u2019s regions.' },
+            { imageId: 'proj-olympics-2018', imagePlaceholder: 'Photo — 2018 PyeongChang Olympics', year: '2018', title: 'PyeongChang Winter Olympics', description: 'The triumph of a decades-long dream, as PyeongChang hosted the Winter Games and completed Korea\u2019s run as a nation that has staged both Summer and Winter Olympics, two World Expos, and a World Cup.' },
+            { imageId: 'proj-han-river', imagePlaceholder: 'Photo — Han River Park', year: 'Han River', title: 'Han River Park', description: 'He shaped the story behind the modern Han River landscape, turning the riverfront into the continuous public park that now defines Seoul\u2019s skyline, weekend life, and civic identity.' },
+            { imageId: 'proj-daehakro', imagePlaceholder: 'Photo — Daehak-ro', year: 'University Street', title: 'Daehak-ro (University Street)', description: 'He conceived Daehak-ro as a street of art and eternal romance — still one of Seoul\u2019s most beloved theater and culture districts, decades after its creation.' },
+            { imageId: 'proj-subway-line2', imagePlaceholder: 'Photo — Seoul Subway Line 2', year: 'Line 2', title: 'Seoul Subway Line 2', description: 'He worked on the routing and civic vision behind the circular Line 2, which remains the backbone of Seoul\u2019s metro system and one of the busiest subway lines in the world.' },
+            { imageId: 'proj-incheon-airport', imagePlaceholder: 'Photo — Incheon International Airport', year: 'Incheon', title: 'Incheon International Airport', description: 'A project nearly everyone opposed at the outset, Incheon Airport is now one of the world\u2019s leading international gateways and a symbol of Korea\u2019s global connectivity.' },
+            { imageId: 'proj-cheonggyecheon', imagePlaceholder: 'Photo — Cheonggyecheon Stream', year: 'Cheonggyecheon', title: 'Cheonggyecheon Restoration', description: 'He contributed to the vision that brought the long-buried Cheonggyecheon stream back to life through the heart of Seoul, replacing an elevated highway with a public waterway.' },
+            { imageId: 'proj-ktx', imagePlaceholder: 'Photo — KTX High-Speed Rail', year: 'KTX', title: 'KTX High-Speed Rail', description: 'He helped shape the transportation infrastructure vision behind Korea\u2019s high-speed rail network, transforming how people move between the country\u2019s major cities.' },
+          ],
+        },
+        {
+          kicker: 'The World',
+          heading: 'Building peace across borders',
+          projects: [
+            { imageId: 'proj-dmz', imagePlaceholder: 'Photo — DMZ Peace Projects', year: 'DMZ', title: 'DMZ Peace City Vision', description: 'The teenage promise he made with his brother in 1958 — a peace city near the DMZ where North and South Korea could live in harmony — has guided decades of planning for the border region as a starting point for peace.' },
+            { imageId: 'proj-tumen', imagePlaceholder: 'Photo — Tumen River Development', year: '1990', title: 'Tumen River Area Development Plan', description: 'As Korea\u2019s representative and a UNDP senior consultant, he worked on the Tumen River Area Development Plan (T.R.A.D.P.), part of his wider Northeast Asia Region Accord vision for cooperation among Korea, China, Russia, and Mongolia.' },
+            { imageId: 'proj-srmf', imagePlaceholder: 'Photo — Silk Road Mayors Forum', year: '2004', title: 'Silk Road Mayors Forum (Yeosu SRMF)', description: 'He founded the Silk Road Mayors Forum to connect city leaders along the historic Silk Road, extending his vision of city-to-city diplomacy across Eurasia.' },
+            { imageId: 'proj-olympeace', imagePlaceholder: 'Photo — WCO Olympeace Movement', year: '1987–88', title: 'WCO Olympeace Movement', description: 'Through the Seoul Assembly of Olympeace and his Appeal for Olympeace, he rallied world leaders around the idea that the Olympic Games could be a force for peace rather than boycott — a movement that continues through the World Citizens Organization today.' },
+          ],
+        },
+      ],
+      footer: '\u00A9 KWAAK YoungHoon. Project details drawn from his published works and public record.',
+    },
+    ko: {
+      brand: '곽영훈',
+      backLink: '← 홈으로',
+      bioLink: '약력',
+      langButton: 'English',
+      intro: {
+        kicker: '프로젝트 상세',
+        heading: '반세기에 걸친 국가 프로젝트',
+        paragraph: '1970년대에 구상한 마스터 비전(M.V.I.P. I~III)부터 이후의 메가 이벤트와 인프라까지, 곽영훈 박사의 일은 국제 이벤트, 수도권, 국가 인프라, 그리고 동북아시아를 아우르는 평화 기획에 걸쳐 있다. 아래 각 프로젝트는 반세기 전 그가 그리기 시작한 빅픽처의 한 조각씩을 보여준다.',
+      },
+      groups: [
+        {
+          kicker: '대한민국',
+          heading: '국가를 지어온 프로젝트들',
+          projects: [
+            { imageId: 'proj-olympics-1988', imagePlaceholder: '사진 — 1988 서울올림픽', year: '1988', title: '서울올림픽', description: '1971년 마스터 비전(M.V.I.P.)을 바탕으로 곽영훈 박사는 한국의 올림픽 데뷔를 뒷받침하는 인프라와 시민적 비전 설계에 참여했다.' },
+            { imageId: 'proj-expo-1993', imagePlaceholder: '사진 — 1993 대전엑스포', year: '1993', title: '대전엑스포', description: '한국 최초의 세계박람회로, 미래를 향한 대담한 도약으로 기획되었다 — 한국의 기술적 야망을 보여주고 대전을 과학·연구의 중심지로 자리매김했다.' },
+            { imageId: 'proj-worldcup-2002', imagePlaceholder: '사진 — 2002 월드컵', year: '2002', title: '한일 월드컵', description: '초기 마스터 플랜에서 구상한 글로벌 메가 이벤트 중 하나로, 일본과 공동 개최하며 한국이 세계 무대에 등장하는 또 하나의 이정표가 되었다.' },
+            { imageId: 'proj-expo-2012', imagePlaceholder: '사진 — 2012 여수엑스포', year: '2012', title: '여수엑스포', description: '이 항구도시와 처음 인연을 맺은 지 50년 만에, 그는 여수세계박람회를 이끌어냈다 — 육지와 바다, 그리고 한국 각 지역 간 균형과 화합을 향한 길이었다.' },
+            { imageId: 'proj-olympics-2018', imagePlaceholder: '사진 — 2018 평창동계올림픽', year: '2018', title: '평창동계올림픽', description: '수십 년에 걸친 꿈이 결실을 맺은 순간으로, 평창 동계올림픽 개최와 함께 한국은 하계·동계 올림픽, 두 번의 세계박람회, 그리고 월드컵까지 모두 개최한 나라가 되었다.' },
+            { imageId: 'proj-han-river', imagePlaceholder: '사진 — 한강공원', year: '한강', title: '한강공원', description: '오늘날 한강의 풍경이 탄생한 배경에는 그가 있다 — 강변을 서울의 스카이라인과 주말 문화, 시민 정체성을 정의하는 연속된 공공 공원으로 바꾸었다.' },
+            { imageId: 'proj-daehakro', imagePlaceholder: '사진 — 대학로', year: '대학로', title: '대학로', description: '대학로를 예술과 영원한 낭만의 거리로 구상했다 — 조성된 지 수십 년이 지난 지금도 서울에서 가장 사랑받는 공연·문화 지구 중 하나다.' },
+            { imageId: 'proj-subway-line2', imagePlaceholder: '사진 — 서울 지하철 2호선', year: '2호선', title: '서울 지하철 2호선', description: '오늘날 서울 대중교통의 근간이자 세계에서 가장 붐비는 지하철 노선 중 하나인 순환선 2호선의 노선과 시민적 비전 설계에 참여했다.' },
+            { imageId: 'proj-incheon-airport', imagePlaceholder: '사진 — 인천국제공항', year: '인천', title: '인천국제공항', description: '처음엔 거의 모두가 반대했던 프로젝트였지만, 인천국제공항은 지금 세계 최고 수준의 관문이자 한국의 글로벌 연결성을 상징하는 존재가 되었다.' },
+            { imageId: 'proj-cheonggyecheon', imagePlaceholder: '사진 — 청계천', year: '청계천', title: '청계천 복원', description: '오랫동안 묻혀 있던 청계천을 서울 도심 한가운데 되살린 비전에 기여했다 — 고가도로 대신 시민을 위한 물길을 되찾았다.' },
+            { imageId: 'proj-ktx', imagePlaceholder: '사진 — KTX 고속철도', year: 'KTX', title: 'KTX 고속철도', description: '한국 고속철도망을 뒷받침하는 교통 인프라 비전 설계에 참여하여, 주요 도시 간 이동 방식을 근본적으로 바꾸어놓았다.' },
+          ],
+        },
+        {
+          kicker: '세계',
+          heading: '국경을 넘어 평화를 짓다',
+          projects: [
+            { imageId: 'proj-dmz', imagePlaceholder: '사진 — DMZ 평화 프로젝트', year: 'DMZ', title: 'DMZ 평화도시 구상', description: '1958년 형과 함께 세운 십 대 시절의 다짐 — 남북이 화합하며 살 수 있는 DMZ 인근 평화도시 — 은 이후 수십 년간 접경 지역을 평화의 출발점으로 만드는 계획의 밑그림이 되었다.' },
+            { imageId: 'proj-tumen', imagePlaceholder: '사진 — 두만강 개발계획', year: '1990', title: '두만강 유역 개발계획', description: '한국 대표이자 UNDP 선임 자문위원으로서 두만강유역개발계획(T.R.A.D.P.)에 참여했으며, 이는 한·중·러·몽골 협력을 아우르는 동북아지역협정(N.E.A.R.A.) 비전의 일부였다.' },
+            { imageId: 'proj-srmf', imagePlaceholder: '사진 — 실크로드 시장포럼', year: '2004', title: '실크로드 시장포럼(여수 SRMF)', description: '실크로드를 따라 도시 지도자들을 연결하는 실크로드 시장포럼을 창설하여, 도시 간 외교라는 그의 비전을 유라시아 전역으로 확장했다.' },
+            { imageId: 'proj-olympeace', imagePlaceholder: '사진 — WCO 올림피스 운동', year: '1987–88', title: 'WCO 올림피스 운동', description: '서울올림픽 평화위원회(SAO)와 올림피스 호소문을 통해, 그는 올림픽이 보이콧이 아닌 평화의 힘이 될 수 있다는 생각으로 세계 지도자들을 결집시켰다 — 이 운동은 오늘날에도 세계시민기구를 통해 이어지고 있다.' },
+          ],
+        },
+      ],
+      footer: '© 곽영훈. 프로젝트 상세 내용은 발간 저서 및 공개 자료를 바탕으로 합니다.',
+    },
+  };
+
+  flattenBlocks(t) {
+    const blocks = [];
+    t.groups.forEach((group) => {
+      blocks.push({ isHeader: true, isProject: false, kicker: group.kicker, heading: group.heading });
+      group.projects.forEach((proj, i) => {
+        const isLast = i === group.projects.length - 1;
+        blocks.push({
+          isHeader: false, isProject: true,
+          imageId: proj.imageId, imagePlaceholder: proj.imagePlaceholder,
+          year: proj.year, title: proj.title, description: proj.description,
+          borderStyle: isLast ? 'border-bottom:1px solid var(--color-divider);' : '',
+        });
+      });
+    });
+    return blocks;
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    if (!this._blocksCache) this._blocksCache = {};
+    if (!this._blocksCache[lang]) this._blocksCache[lang] = this.flattenBlocks(this.content[lang]);
+    if (!this._tCache) this._tCache = {};
+    if (!this._tCache[lang]) this._tCache[lang] = { ...this.content[lang], blocks: this._blocksCache[lang] };
+    return {
+      t: this._tCache[lang],
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'en' ? 'ko' : 'en' })),
+    };
+  }
+}
+</script>
+</body>
+</html>
