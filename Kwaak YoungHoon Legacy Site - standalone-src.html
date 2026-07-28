@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#f6f1e8">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f6f1e8"/>
+    <text x="600" y="380" font-family="Georgia, serif" font-size="120" text-anchor="middle" fill="#8a5a34">KY</text>
+    <line x1="450" y1="440" x2="750" y2="440" stroke="#8a5a34" stroke-width="4"/>
+    <text x="600" y="490" font-family="Georgia, serif" font-size="32" text-anchor="middle" fill="#8a5a34">KWAAK YoungHoon</text>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="../_ds/classical-6c0fe2e1-130c-4491-a2cc-cfcc50cd3f00/styles.css">
+<style>
+  body { margin:0; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-600); }
+  @media (max-width: 760px) {
+    .gcol-260 { grid-template-columns: 1fr !important; }
+    .gcol-112 { grid-template-columns: 1fr !important; gap: var(--space-2) !important; }
+    .gcol-112 .tl-year { text-align: left !important; padding-top: 0 !important; }
+    .gcol-112 .tl-line { display: none !important; }
+    .gcol-footer { grid-template-columns: 1fr !important; }
+    .hero-photo { display: none !important; }
+    .hero-title { max-width: 100% !important; }
+    .hero-section { padding-top: 100px !important; min-height: 0 !important; padding-bottom: 56px !important; }
+  }
+</style>
+</helmet>
+<div style="font-family:var(--font-body); background:var(--color-bg); color:var(--color-text);">
+
+  <div style="position:fixed; top:24px; right:24px; z-index:50;">
+    <button onclick="{{ toggleLang }}" style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:14px; letter-spacing:0.02em; background:var(--color-bg); color:var(--color-accent); border:1px solid var(--color-accent); border-radius:var(--radius-md); padding:9px 20px; cursor:pointer;">{{ t.langButton }}</button>
+  </div>
+
+  <!-- HERO -->
+  <section data-screen-label="Hero" class="hero-section" style="min-height:92vh; display:flex; flex-direction:column; justify-content:center; padding:120px 8vw 80px; position:relative; border-bottom:1px solid var(--color-divider);">
+    <div style="max-width:980px;">
+      <div style="font-family:var(--font-body); font-weight:600; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent); margin-bottom:28px;">{{ t.hero.kicker }}</div>
+      <h1 class="hero-title" style="font-size:clamp(36px,4.5vw,64px); margin:0 0 28px; letter-spacing:-0.01em; max-width:60%;">{{ t.hero.name }}</h1>
+      <p style="font-family:var(--font-heading); font-style:italic; font-weight:400; font-size:clamp(22px,2.6vw,30px); max-width:760px; margin:0 0 40px; color:var(--color-text);">{{ t.hero.title }}</p>
+      <div style="display:flex; flex-wrap:wrap; gap:8px 20px; font-family:var(--font-heading);">
+        <sc-for list="{{ t.hero.tags }}" as="tag" hint-placeholder-count="7">
+          <span style="font-size:15px; letter-spacing:0.02em; color:var(--color-accent);">{{ tag }}</span>
+        </sc-for>
+      </div>
+    </div>
+    <img src="../assets/taekwondo-mit.png" alt="KWAAK YoungHoon performing a Taekwondo demonstration in front of the MIT main building" class="hero-photo" style="position:absolute; right:8vw; bottom:40px; top:20vh; width:min(30vw,380px); object-fit:cover; border:6px solid var(--color-surface); outline:1px solid var(--color-divider); box-shadow:var(--shadow-md); filter:sepia(0.22) saturate(0.82) contrast(1.05);">
+  </section>
+
+  <!-- BIO -->
+  <section data-screen-label="Biography" style="padding:var(--space-8) 8vw;">
+    <div class="gcol-260" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:260px 1fr; gap:var(--space-8);">
+      <div>
+        <h6 style="color:var(--color-accent); margin-bottom:var(--space-2);">{{ t.bio.kicker }}</h6>
+        <h2 style="margin-top:var(--space-1);">{{ t.bio.heading }}</h2>
+        <a href="Kwaak YoungHoon Bio.dc.html" style="display:inline-block; margin-top:var(--space-4); font-size:15px; font-family:var(--font-heading); font-weight:var(--font-heading-weight); border:1.5px solid var(--color-accent); color:var(--color-accent); background:var(--color-bg); border-radius:var(--radius-md); padding:10px 22px; text-decoration:none; white-space:nowrap;">{{ t.bio.readMoreLabel }}</a>
+      </div>
+      <div>
+        <p style="font-size:19px; line-height:1.75; text-align:justify; margin:0 0 var(--space-6);">{{ t.bio.paragraph }}</p>
+        <hr class="hr">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:var(--space-6); margin-top:var(--space-4);">
+          <sc-for list="{{ t.bio.facts }}" as="fact" hint-placeholder-count="4">
+            <div>
+              <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:28px; color:var(--color-accent);">{{ fact.value }}</div>
+              <div style="font-size:13px; color:var(--color-text); opacity:0.65; margin-top:4px;">{{ fact.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section data-screen-label="Timeline" style="padding:var(--space-8) 8vw; background:var(--color-surface); border-top:1px solid var(--color-divider); border-bottom:1px solid var(--color-divider);">
+    <div style="max-width:1000px; margin:0 auto var(--space-8);">
+      <h6 style="color:var(--color-accent);">{{ t.timeline.kicker }}</h6>
+      <h2 style="margin-top:var(--space-1); max-width:700px;">{{ t.timeline.heading }}</h2>
+      <p style="font-size:16px; max-width:620px; margin-top:var(--space-3); opacity:0.75;">{{ t.timeline.subheading }}</p>
+      <a href="Kwaak YoungHoon Projects.dc.html" style="display:inline-block; margin-top:var(--space-4); font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:14px; border:1px solid var(--color-accent); color:var(--color-accent); border-radius:var(--radius-md); padding:9px 20px; text-decoration:none;">{{ t.timeline.detailLink }}</a>
+    </div>
+    <div style="max-width:1000px; margin:0 auto; position:relative;">
+      <div class="tl-line" style="position:absolute; left:112px; top:8px; bottom:8px; width:1px; background:var(--color-divider);"></div>
+      <sc-for list="{{ t.timeline.items }}" as="item" hint-placeholder-count="6">
+        <div class="gcol-112" style="display:grid; grid-template-columns:112px 1fr; gap:var(--space-6); padding:0 0 var(--space-6); position:relative;">
+          <div class="tl-year" style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; color:var(--color-accent); padding-top:2px; text-align:right;">{{ item.year }}</div>
+          <div style="position:relative; padding-left:var(--space-4);">
+            <div style="position:absolute; left:-6px; top:7px; width:11px; height:11px; border-radius:50%; background:var(--color-bg); border:2px solid var(--color-accent);"></div>
+            <h3 style="margin:0 0 var(--space-2);">{{ item.title }}</h3>
+            <p style="font-size:15px; line-height:1.7; text-align:justify; margin:0; max-width:620px; opacity:0.85;">{{ item.body }}</p>
+            <sc-if value="{{ item.hasImage }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ item.imageUrl }}" alt="{{ item.title }}" style="width:280px; max-width:100%; margin-top:var(--space-3); border:6px solid var(--color-bg); outline:1px solid var(--color-divider); box-shadow:var(--shadow-sm); filter:sepia(0.22) saturate(0.82) contrast(1.05);">
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section data-screen-label="Testimonials" style="padding:var(--space-8) 8vw; background:var(--color-surface); border-top:1px solid var(--color-divider); border-bottom:1px solid var(--color-divider);">
+    <div style="max-width:1100px; margin:0 auto var(--space-8);">
+      <h6 style="color:var(--color-accent);">{{ t.quotes.kicker }}</h6>
+      <h2 style="margin-top:var(--space-1);">{{ t.quotes.heading }}</h2>
+    </div>
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:var(--space-4);">
+      <sc-for list="{{ t.quotes.items }}" as="q" hint-placeholder-count="6">
+        <div class="card">
+          <p style="font-family:var(--font-heading); font-style:italic; font-size:18px; line-height:1.6; margin:0 0 var(--space-3);">{{ q.quote }}</p>
+          <div style="font-size:13px; font-weight:600; color:var(--color-accent);">{{ q.name }}</div>
+          <div style="font-size:12px; opacity:0.65; margin-top:2px;">{{ q.role }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-screen-label="Footer" style="padding:var(--space-8) 8vw var(--space-6); background:var(--color-surface); border-top:1px solid var(--color-divider);">
+    <div class="gcol-footer" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:var(--space-6);">
+      <div>
+        <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:22px; margin-bottom:var(--space-2);">{{ t.footer.name }}</div>
+        <p style="font-size:13px; line-height:1.7; max-width:320px; opacity:0.7;">{{ t.footer.tagline }}</p>
+      </div>
+      <div>
+        <h6 style="opacity:0.6; margin-bottom:var(--space-3);">{{ t.footer.contactLabel }}</h6>
+        <div style="font-size:14px; line-height:2;">
+          <div>{{ t.footer.address }}</div>
+          <div><a href="mailto:dr.kwaak@gmail.com">dr.kwaak@gmail.com</a></div>
+        </div>
+      </div>
+      <div>
+        <h6 style="opacity:0.6; margin-bottom:var(--space-3);">{{ t.footer.orgLabel }}</h6>
+        <div style="font-size:14px; line-height:2;">
+          <div>{{ t.footer.org1 }}</div>
+          <div>{{ t.footer.org2 }}</div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr" style="max-width:1100px; margin-left:auto; margin-right:auto;">
+    <div style="max-width:1100px; margin:0 auto; font-size:12px; opacity:0.55;">{{ t.footer.copyright }}</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+
+  content = {
+    en: {
+      langButton: '한국어',
+      bio: {
+        kicker: 'Biography',
+        heading: 'A fifty-year journey of dreams',
+        readMoreLabel: 'View biography in detail →',
+        paragraph: 'Born into the ruins of the Korean War, KWAAK YoungHoon decided as a teenager to devote his life to rebuilding his country. He studied architecture, planning, political science, landscape architecture, and education in the United States — at MIT and Harvard — before returning home to help design the physical and civic infrastructure of modern Korea.',
+        facts: [
+          { value: '50+', label: 'Years shaping Korea\u2019s development' },
+          { value: '8', label: 'Presidential administrations advised' },
+          { value: '4', label: 'Olympics & World Expos conceptualized' },
+          { value: '9th Dan', label: 'Taekwondo Grand Master' },
+        ],
+      },
+      hero: {
+        kicker: 'Policy Architect · Educator · Peace Advocate',
+        name: 'KWAAK YoungHoon, Ph.D.',
+        title: 'The policy architect who changed the map of the Korean Peninsula',
+        tags: ['1988 Seoul Olympics', 'Daejeon Expo 1993', 'Yeosu Expo 2012', 'Han River Park', 'Incheon Airport', 'Seoul Subway', 'KTX High-Speed Rail'],
+      },
+      bio: {
+        kicker: 'Biography',
+        heading: 'A fifty-year journey of dreams',
+        paragraph: 'Born into the ruins of the Korean War, KWAAK YoungHoon decided as a teenager to devote his life to rebuilding his country. He studied architecture, planning, political science, landscape architecture, and education in the United States — at MIT and Harvard — before returning home to help design the physical and civic infrastructure of modern Korea. For over fifty years he has shaped the events, streets, parks, and systems that define how Koreans live, move, and gather, working across eight presidential administrations without ever holding formal office.',
+        facts: [
+          { value: '50+', label: 'Years shaping Korea\u2019s development' },
+          { value: '8', label: 'Presidential administrations advised' },
+          { value: '4', label: 'Olympics & World Expos conceptualized' },
+          { value: '9th Dan', label: 'Taekwondo Grand Master' },
+        ],
+      },
+      timeline: {
+        kicker: 'Legacy',
+        heading: 'A big picture, drawn half a century ago',
+        subheading: 'The national projects and mega-events that reshaped the Korean Peninsula over five decades.',
+        detailLink: 'View all projects in detail →',
+        items: [
+          { year: '1988', title: 'Seoul Olympics', body: 'As conceptual architect, he helped design the infrastructure and vision behind Korea\u2019s Olympic debut on the world stage.' },
+          { year: '\u2014', title: 'The Han River Park', body: 'He shaped the modern Han River landscape, turning the riverfront into the public park that now defines Seoul\u2019s skyline and everyday life.' },
+          { year: '\u2014', title: 'Daehak-ro, University Street', body: 'He conceived Daehak-ro as a street of art and culture — still one of Seoul\u2019s most beloved arts districts.' },
+          { year: '\u2014', title: 'Seoul Subway Line 2', body: 'He worked on the routing and vision behind Line 2, the circular line that remains the backbone of Seoul\u2019s transit system.' },
+          { year: '\u2014', title: 'Incheon International Airport', body: 'A project nearly everyone opposed at the outset, now one of the world\u2019s leading international gateways.' },
+          { year: '\u2014', title: 'Cheonggyecheon restoration', body: 'He contributed to the vision that brought the buried Cheonggyecheon stream back to life through the heart of Seoul.' },
+          { year: '1993', title: 'Daejeon Expo', body: 'A bold leap into the future — he conceptualized Korea\u2019s first World Expo, held in Daejeon.' },
+          { year: '\u2014', title: 'KTX high-speed rail', body: 'He helped shape the transportation infrastructure vision behind Korea\u2019s high-speed rail network.' },
+          { year: '2012', title: 'Yeosu Expo', body: 'Fifty years after first falling for the port city, he helped bring the World Expo to Yeosu, a path toward balance and harmony.' },
+          { year: '2018', title: 'PyeongChang Winter Olympics', body: 'He saw the triumph of a decades-long dream as PyeongChang hosted the Winter Games.' },
+          { year: '\u2014', title: 'DMZ & Tumen River peace projects', body: 'As Korea\u2019s representative and a UNDP senior consultant, he worked on development plans for the DMZ and the Tumen River region — knocking on the door of peace between South and North.' },
+        ],
+      },
+      peace: {
+        kicker: 'World Citizens & Peace',
+        heading: 'A lifelong peace movement',
+        paragraph: 'Having experienced the Korean War as a child, KWAAK YoungHoon has spent his life building bridges instead of walls — founding organizations, leading civic movements, and carrying a black belt\u2019s discipline into decades of diplomacy.',
+        roles: [
+          { title: 'World Citizens Organization (WCO)', detail: 'Founder & President — founded 1987' },
+          { title: 'UN Association of the Republic of Korea', detail: 'President' },
+          { title: 'Taekwondo, 9th-degree Black Belt', detail: 'Grand Master, leading its globalization' },
+          { title: 'Happiness Inexperience & Sharing Movement (THIS)', detail: 'Co-President' },
+          { title: 'International Buddhist Confederation, Delhi', detail: 'Global Advisor' },
+        ],
+      },
+      quotes: {
+        kicker: 'In Their Words',
+        heading: 'Foreword to Miracle on the Han River',
+        items: [
+          { quote: '\u201CHe truly sees the future, understands the nation, and envisions the world. I have always admired him for dedicating his life to the development of the country, dreaming and planning with a vision that spans 100 years.\u201D', name: 'BAN Ki-moon', role: 'Former UN Secretary-General' },
+          { quote: '\u201CFor him, an architect in the truest sense, the Korean Peninsula was too small a stage.\u201D', name: 'SEUNG H-sang', role: 'Architect' },
+          { quote: '\u201CHow did South Korea grow so quickly from a recipient nation to a donor nation? I believe the answer lies in people like Dr. KWAAK YoungHoon.\u201D', name: 'CHOI Bool-Am', role: 'Broadcaster' },
+          { quote: '\u201CHe has built a cross-border human network through his long-term vision and exceptional persuasive skills.\u201D', name: 'KIM Jin-sun', role: 'Chair, PyeongChang 2018 Organizing Committee' },
+          { quote: '\u201CThe marks he has left along the way testify to his remarkable status as a true \u2018world citizen.\u2019\u201D', name: 'LEE Sam-Yeol', role: 'Secretary-General, Korean National Commission for UNESCO' },
+          { quote: '\u201CDr. KWAAK YoungHoon is a hidden contributor to the \u2018miraculous\u2019 development of the Republic of Korea, consistently working silently without ever seeking personal benefit.\u201D', name: 'SHIM Woo-kyung', role: 'Emeritus Professor, Korea University' },
+        ],
+      },
+      book: {
+        kicker: 'The Book',
+        title: 'Miracle on the Han River',
+        subtitle: 'A Long Journey of Dreams',
+        description: 'A book-length conversation between Dr. KWAAK YoungHoon and philosopher Professor KIM Kwangsoo, tracing fifty years of national projects and the spirit behind them — from a teenage vow in a war-torn country to the Olympics, Expos, and infrastructure that reshaped the Korean Peninsula.',
+        authorsLabel: 'Authors', authors: 'KWAAK YoungHoon · KIM Kwangsoo',
+        publisherLabel: 'Publisher', publisher: 'Gimm-Young Publishers',
+        dateLabel: 'Published', date: 'December 2021',
+        isbnLabel: 'ISBN', isbn: '978-89-349-2347-3',
+      },
+      footer: {
+        name: 'KWAAK YoungHoon, Ph.D.',
+        tagline: 'Founder & President, World Citizens Organization. President, UN Association of the ROK.',
+        contactLabel: 'Contact',
+        address: 'WCO House, 252-6, Donghoro 17-gil, Jung-gu, Seoul',
+        orgLabel: 'Organizations',
+        org1: 'World Citizens Organization (WCO)',
+        org2: 'UN Association of the Republic of Korea',
+        copyright: '\u00A9 KWAAK YoungHoon. Content drawn from "Miracle on the Han River: A Long Journey of Dreams" (Gimm-Young Publishers, 2021).',
+      },
+    },
+    ko: {
+      langButton: 'English',
+      bio: {
+        kicker: '약력',
+        heading: '반세기에 걸친 꿈의 대장정',
+        readMoreLabel: '약력 자세히 보기 →',
+        paragraph: '한국전쟁의 폐허 속에서 태어난 곽영훈은 십 대 시절 조국의 재건에 삶을 바치기로 결심했다. 미국 MIT와 하버드에서 건축, 도시계획, 정책학, 조경, 교육학을 공부한 뒤 귀국하여 현대 한국의 물리적·시민적 기반을 설계하는 일에 뛰어들었다.',
+        facts: [
+          { value: '50+', label: '대한민국 발전을 이끈 세월' },
+          { value: '8', label: '자문한 대통령 정권' },
+          { value: '4', label: '기획한 올림픽·엑스포' },
+          { value: '9단', label: '태권도 그랜드마스터' },
+        ],
+      },
+      hero: {
+        kicker: '정책건축가 · 교육자 · 평화운동가',
+        name: '곽영훈 박사',
+        title: '한반도의 지도를 바꾼 정책건축가',
+        tags: ['1988 서울올림픽', '1993 대전엑스포', '2012 여수엑스포', '한강공원', '인천국제공항', '서울 지하철', 'KTX 고속철도'],
+      },
+      bio: {
+        kicker: '약력',
+        heading: '반세기에 걸친 꿈의 대장정',
+        paragraph: '한국전쟁의 폐허 속에서 태어난 곽영훈은 십 대 시절 조국의 재건에 삶을 바치기로 결심했다. 미국 MIT와 하버드에서 건축, 도시계획, 정책학, 조경, 교육학을 공부한 뒤 귀국하여 현대 한국의 물리적·시민적 기반을 설계하는 일에 뛰어들었다. 지난 50여 년간 그는 공식 관직을 맡은 적 없이 여덟 정권을 넘나들며, 한국인의 삶과 이동, 만남의 방식을 정의하는 행사와 거리, 공원, 시스템을 만들어왔다.',
+        facts: [
+          { value: '50+', label: '대한민국 발전을 이끈 세월' },
+          { value: '8', label: '자문한 대통령 정권' },
+          { value: '4', label: '기획한 올림픽·엑스포' },
+          { value: '9단', label: '태권도 그랜드마스터' },
+        ],
+      },
+      timeline: {
+        kicker: '업적',
+        heading: '반세기 전 그린 빅픽처',
+        subheading: '지난 50여 년간 한반도를 바꾼 국가 프로젝트와 메가 이벤트.',
+        detailLink: '모든 프로젝트 자세히 보기 →',
+        items: [
+          { year: '1988', title: '서울올림픽', body: '개념 설계자로서 한국의 세계 무대 데뷔를 뒷받침한 인프라와 비전 설계에 참여했다.' },
+          { year: '—', title: '한강공원', body: '오늘날 서울의 스카이라인과 일상을 정의하는 한강 풍경을 만들었다.' },
+          { year: '—', title: '대학로', body: '대학로를 예술과 문화의 거리로 구상했다 — 지금도 서울에서 가장 사랑받는 예술 지구 중 하나다.' },
+          { year: '—', title: '서울 지하철 2호선', body: '오늘날 서울 대중교통의 근간인 순환선 2호선의 노선과 비전 설계에 참여했다.' },
+          { year: '—', title: '인천국제공항', body: '처음엔 거의 모두가 반대했던 프로젝트가 지금은 세계 최고 수준의 관문이 되었다.' },
+          { year: '—', title: '청계천 복원', body: '묻혀 있던 청계천을 서울 도심 한가운데 되살린 비전에 기여했다.' },
+          { year: '1993', title: '대전엑스포', body: '미래를 향한 대담한 도약 — 한국 최초의 세계박람회를 개념 설계했다.' },
+          { year: '—', title: 'KTX 고속철도', body: '한국 고속철도망을 뒷받침하는 교통 인프라 비전 설계에 참여했다.' },
+          { year: '2012', title: '여수엑스포', body: '이 항구도시와 처음 인연을 맺은 지 50년 만에 균형과 화합을 향한 여수세계박람회를 이끌어냈다.' },
+          { year: '2018', title: '평창동계올림픽', body: '수십 년에 걸친 꿈이 평창 동계올림픽 개최로 결실을 맺는 순간을 지켜보았다.' },
+          { year: '—', title: 'DMZ·두만강 평화 프로젝트', body: '한국 대표이자 UNDP 선임 자문위원으로서 DMZ와 두만강 유역 개발 계획에 참여하며 남북 평화의 문을 두드렸다.' },
+        ],
+      },
+      peace: {
+        kicker: '세계시민과 평화',
+        heading: '평생에 걸친 평화운동',
+        paragraph: '어린 시절 한국전쟁을 겪은 곽영훈은 평생 벽 대신 다리를 놓는 일에 힘써왔다 — 여러 단체를 창설하고 시민운동을 이끌며, 태권도인의 규율을 수십 년간의 외교 활동 속에 녹여냈다.',
+        roles: [
+          { title: '세계시민기구(WCO)', detail: '창설자 겸 회장 — 1987년 창설' },
+          { title: 'UN한국협회', detail: '회장' },
+          { title: '태권도 9단', detail: '그랜드마스터, 세계화 주도' },
+          { title: '(사)참행복나눔운동본부', detail: '공동대표' },
+          { title: '델리 국제불교연맹(IBC)', detail: 'Global Advisor' },
+        ],
+      },
+      quotes: {
+        kicker: '그를 말하다',
+        heading: '『한강의 기적』 추천의 말',
+        items: [
+          { quote: '“그는 실로 미래를 보고, 나라를 보고, 세계를 본다. 백년대계를 꿈꾸며 일평생 국가발전을 위해 일해온 그를 보면 늘 존경심이 든다.”', name: '반기문', role: '전 유엔 사무총장' },
+          { quote: '“진정한 의미의 Architect인 그에게 한반도는 너무도 좁은 무대였다.”', name: '승효상', role: '건축가' },
+          { quote: '“한국은 어떻게 이렇게 빨리 원조를 받는 나라에서 원조를 하는 나라로 성장했을까? 나는 그 이유를 곽영훈 박사 같은 사람에게서 찾는다.”', name: '최불암', role: '방송인' },
+          { quote: '“그는 장기적인 안목과 탁월한 설득력으로 국경을 초월한 인적 네트워크를 형성해왔다.”', name: '김진선', role: '평창동계올림픽 조직위원장' },
+          { quote: '“그가 지나간 길 위에 남은 흔적들이 그가 탁월한 ‘세계시민’임을 증명한다.”', name: '이삼열', role: '유네스코 한국위원회 사무총장' },
+          { quote: '“곽영훈 박사는 보이지 않는 곳에서도 최선을 다하는 참된 일꾼이다. 사익을 탐하지 않고 언제나 묵묵히 일해온 대한민국 발전의 숨은 공신이다.”', name: '심우경', role: '고려대 명예교수' },
+        ],
+      },
+      book: {
+        kicker: '저서',
+        title: '한강의 기적',
+        subtitle: '그 꿈의 대장정',
+        description: '곽영훈 박사와 철학자 김광수 교수의 대담집으로, 전쟁으로 폐허가 된 나라에서 십 대에 세운 다짐부터 한반도를 바꾼 올림픽·엑스포·인프라까지 50년에 걸친 국가 프로젝트와 그 정신을 담았다.',
+        authorsLabel: '지은이', authors: '곽영훈 · 김광수',
+        publisherLabel: '발행처', publisher: '김영사',
+        dateLabel: '발행', date: '2021년 12월',
+        isbnLabel: 'ISBN', isbn: '978-89-349-2347-3',
+      },
+      footer: {
+        name: '곽영훈 박사',
+        tagline: '세계시민기구(WCO) 창설자 겸 회장. UN한국협회 회장.',
+        contactLabel: '연락처',
+        address: '서울특별시 중구 동호로17길 252-6 WCO House',
+        orgLabel: '소속 단체',
+        org1: '세계시민기구(WCO)',
+        org2: 'UN한국협회',
+        copyright: '© 곽영훈. 본 콘텐츠는 『한강의 기적: 그 꿈의 대장정』(김영사, 2021)을 바탕으로 합니다.',
+      },
+    },
+  };
+
+  renderVals() {
+    const lang = this.state.lang;
+    if (!this._tCacheV2) this._tCacheV2 = {};
+    if (!this._tCacheV2[lang]) {
+      const t = this.content[lang];
+      this._tCacheV2[lang] = {
+        ...t,
+        timeline: {
+          ...t.timeline,
+          items: t.timeline.items.map(item => ({ ...item, hasImage: !!item.imageUrl })),
+        },
+      };
+    }
+    return {
+      t: this._tCacheV2[lang],
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'en' ? 'ko' : 'en' })),
+    };
+  }
+}
+</script>
+</body>
+</html>
