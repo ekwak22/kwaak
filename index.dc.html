@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/classical-6c0fe2e1-130c-4491-a2cc-cfcc50cd3f00/styles.css">
+<style>
+  body { margin:0; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-600); }
+  @media (max-width: 760px) {
+    .gcol-footer { grid-template-columns: 1fr !important; }
+    .gcol-cats { grid-template-columns: 1fr !important; }
+    .hero-photo { display: none !important; }
+    .hero-title { max-width: 100% !important; }
+    .hero-section p { max-width: 100% !important; }
+    .hero-section { padding-top: 100px !important; min-height: 0 !important; padding-bottom: 56px !important; }
+  }
+</style>
+</helmet>
+<div style="font-family:var(--font-body); background:var(--color-bg); color:var(--color-text);">
+
+  <nav class="nav" style="background:var(--color-bg); flex-wrap:wrap; row-gap:8px;">
+    <a href="index.dc.html" class="nav-brand" style="text-decoration:none;">{{ t.brand }}</a>
+    <a href="Kwaak YoungHoon Bio.dc.html">{{ t.personLink }}</a>
+    <a href="Kwaak YoungHoon Korea.dc.html">{{ t.koreaLink }}</a>
+    <a href="Kwaak YoungHoon World.dc.html">{{ t.worldLink }}</a>
+    <button onclick="{{ toggleLang }}" style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:14px; letter-spacing:0.02em; white-space:nowrap; background:var(--color-bg); color:var(--color-accent); border:1px solid var(--color-accent); border-radius:var(--radius-md); padding:7px 16px; cursor:pointer;">{{ t.langButton }}</button>
+  </nav>
+
+  <!-- HERO -->
+  <section data-screen-label="Hero" class="hero-section" style="min-height:80vh; display:flex; flex-direction:column; justify-content:center; padding:64px 8vw 80px; position:relative; border-bottom:1px solid var(--color-divider);">
+    <div style="max-width:980px;">
+      <div style="font-family:var(--font-body); font-weight:600; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent); margin-bottom:28px;">{{ t.hero.kicker }}</div>
+      <h1 class="hero-title" style="font-size:clamp(36px,4.5vw,64px); margin:0 0 28px; letter-spacing:-0.01em; max-width:60%;">{{ t.hero.name }}</h1>
+      <p style="font-family:var(--font-heading); font-style:italic; font-weight:400; font-size:clamp(22px,2.6vw,30px); max-width:60%; margin:0; color:var(--color-text);">{{ t.hero.title }}</p>
+    </div>
+    <img src="assets/taekwondo-mit.png" alt="KWAAK YoungHoon performing a Taekwondo demonstration in front of the MIT main building" class="hero-photo" style="position:absolute; right:8vw; bottom:40px; top:20vh; width:min(30vw,380px); object-fit:cover; border:6px solid var(--color-surface); outline:1px solid var(--color-divider); box-shadow:var(--shadow-md); filter:sepia(0.22) saturate(0.82) contrast(1.05);">
+  </section>
+
+  <!-- THREE SCALES -->
+  <section data-screen-label="Three Scales" style="padding:var(--space-8) 8vw;">
+    <div style="max-width:1100px; margin:0 auto var(--space-8);">
+      <h6 style="color:var(--color-accent);">{{ t.scales.kicker }}</h6>
+      <h2 style="margin-top:var(--space-1); max-width:700px;">{{ t.scales.heading }}</h2>
+      <p style="font-size:16px; max-width:640px; margin-top:var(--space-3); opacity:0.75;">{{ t.scales.subheading }}</p>
+    </div>
+    <div class="gcol-cats" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:var(--space-6);">
+      <sc-for list="{{ t.scales.categories }}" as="cat" hint-placeholder-count="3">
+        <a href="{{ cat.href }}" style="text-decoration:none; color:var(--color-text); display:block; border:1px solid var(--color-divider); border-radius:var(--radius-md); padding:var(--space-6); background:var(--color-surface);">
+          <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-accent); margin-bottom:var(--space-3);">{{ cat.scaleLabel }}</div>
+          <h3 style="margin:0 0 var(--space-3); font-size:28px;">{{ cat.title }}</h3>
+          <p style="font-size:15px; line-height:1.7; margin:0 0 var(--space-4); opacity:0.8;">{{ cat.description }}</p>
+          <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:14px; color:var(--color-accent);">{{ cat.linkLabel }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-screen-label="Footer" style="padding:var(--space-8) 8vw var(--space-6); background:var(--color-surface); border-top:1px solid var(--color-divider);">
+    <div class="gcol-footer" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:var(--space-6);">
+      <div>
+        <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:22px; margin-bottom:var(--space-2);">{{ t.footer.name }}</div>
+        <p style="font-size:13px; line-height:1.7; max-width:320px; opacity:0.7;">{{ t.footer.tagline }}</p>
+      </div>
+      <div>
+        <h6 style="opacity:0.6; margin-bottom:var(--space-3);">{{ t.footer.contactLabel }}</h6>
+        <div style="font-size:14px; line-height:2;">
+          <div>{{ t.footer.address }}</div>
+          <div><a href="mailto:dr.kwaak@gmail.com">dr.kwaak@gmail.com</a></div>
+        </div>
+      </div>
+      <div>
+        <h6 style="opacity:0.6; margin-bottom:var(--space-3);">{{ t.footer.orgLabel }}</h6>
+        <div style="font-size:14px; line-height:2;">
+          <div>{{ t.footer.org1 }}</div>
+          <div>{{ t.footer.org2 }}</div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr" style="max-width:1100px; margin-left:auto; margin-right:auto;">
+    <div style="max-width:1100px; margin:0 auto; font-size:12px; opacity:0.55;">{{ t.footer.copyright }}</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+
+  content = {
+    en: {
+      brand: 'KWAAK YoungHoon',
+      personLink: 'Person',
+      koreaLink: 'Korea',
+      worldLink: 'World',
+      langButton: '한국어',
+      hero: {
+        kicker: 'Policy Architect · Educator · Peace Advocate',
+        name: 'KWAAK YoungHoon, Ph.D.',
+        title: 'The policy architect who changed the map of the Korean Peninsula',
+      },
+      scales: {
+        kicker: 'Explore by Scale',
+        heading: 'A life\u2019s work at three scales',
+        subheading: 'From the man himself, to the nation he helped build, to the world he worked to bring closer together.',
+        categories: [
+          { href: 'Kwaak YoungHoon Bio.dc.html', scaleLabel: 'Human Scale', title: 'Person', description: 'His early life, education at MIT and Harvard, and lifelong commitment to peace and civic service.', linkLabel: 'View the person \u2192' },
+          { href: 'Kwaak YoungHoon Korea.dc.html', scaleLabel: 'City & National Scale', title: 'Korea', description: 'Olympics, World Expos, and the streets, parks, and rail lines that shaped how Koreans live and move.', linkLabel: 'View Korea projects \u2192' },
+          { href: 'Kwaak YoungHoon World.dc.html', scaleLabel: 'International & Global Scale', title: 'World', description: 'Cross-border development and peace planning across Northeast Asia and the Silk Road.', linkLabel: 'View world projects \u2192' },
+        ],
+      },
+      footer: {
+        name: 'KWAAK YoungHoon, Ph.D.',
+        tagline: 'Founder & President, World Citizens Organization. President, UN Association of the ROK.',
+        contactLabel: 'Contact',
+        address: 'WCO House, 252-6, Donghoro 17-gil, Jung-gu, Seoul',
+        orgLabel: 'Organizations',
+        org1: 'World Citizens Organization (WCO)',
+        org2: 'UN Association of the Republic of Korea',
+        copyright: '\u00A9 KWAAK YoungHoon.',
+      },
+    },
+    ko: {
+      brand: '곽영훈',
+      personLink: '인물',
+      koreaLink: '대한민국',
+      worldLink: '세계',
+      langButton: 'English',
+      hero: {
+        kicker: '정책건축가 · 교육자 · 평화운동가',
+        name: '곽영훈 박사',
+        title: '한반도의 지도를 바꾼 정책건축가',
+      },
+      scales: {
+        kicker: '차원별로 살펴보기',
+        heading: '세 가지 차원에서 본 한 사람의 일생',
+        subheading: '한 사람의 삶에서, 그가 지어온 나라로, 그리고 그가 가까워지도록 애써온 세계로.',
+        categories: [
+          { href: 'Kwaak YoungHoon Bio.dc.html', scaleLabel: '개인 차원', title: '인물', description: '어린 시절과 MIT·하버드에서의 배움, 그리고 평생에 걸친 평화와 시민 봉사에 대한 헌신.', linkLabel: '인물 보기 \u2192' },
+          { href: 'Kwaak YoungHoon Korea.dc.html', scaleLabel: '도시·국가 차원', title: '대한민국', description: '올림픽과 세계박람회, 그리고 한국인의 삶과 이동을 만들어온 거리·공원·철도.', linkLabel: '대한민국 프로젝트 보기 \u2192' },
+          { href: 'Kwaak YoungHoon World.dc.html', scaleLabel: '국제·지구촌 차원', title: '세계', description: '동북아시아와 실크로드를 아우르는 초국경 개발과 평화 기획.', linkLabel: '세계 프로젝트 보기 \u2192' },
+        ],
+      },
+      footer: {
+        name: '곽영훈 박사',
+        tagline: '세계시민기구(WCO) 창설자 겸 회장. UN한국협회 회장.',
+        contactLabel: '연락처',
+        address: '서울특별시 중구 동호로17길 252-6 WCO House',
+        orgLabel: '소속 단체',
+        org1: '세계시민기구(WCO)',
+        org2: 'UN한국협회',
+        copyright: '© 곽영훈.',
+      },
+    },
+  };
+
+  renderVals() {
+    const lang = this.state.lang;
+    return {
+      t: this.content[lang],
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'en' ? 'ko' : 'en' })),
+    };
+  }
+}
+</script>
+</body>
+</html>

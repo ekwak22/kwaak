@@ -13,20 +13,29 @@
   body { margin:0; }
   a { color: var(--color-accent); }
   a:hover { color: var(--color-accent-600); }
+  @media (max-width: 760px) {
+    .gcol-260 { grid-template-columns: 1fr !important; }
+    .gcol-112 { grid-template-columns: 1fr !important; gap: var(--space-2) !important; }
+    .gcol-112 .tl-year { text-align: left !important; padding-top: 0 !important; }
+    .gcol-112 .tl-line { display: none !important; }
+    .gcol-2 { grid-template-columns: 1fr !important; }
+  }
 </style>
 </helmet>
 <div style="font-family:var(--font-body); background:var(--color-bg); color:var(--color-text);">
 
-  <nav class="nav" style="background:var(--color-bg);">
-    <a href="Kwaak YoungHoon Legacy Site.dc.html" class="nav-brand" style="text-decoration:none;">{{ t.brand }}</a>
-    <a href="Kwaak YoungHoon Legacy Site.dc.html">{{ t.backLink }}</a>
-    <a href="Kwaak YoungHoon Projects.dc.html">{{ t.projectsLink }}</a>
+  <nav class="nav" style="background:var(--color-bg); flex-wrap:wrap; row-gap:8px;">
+    <a href="index.dc.html" class="nav-brand" style="text-decoration:none;">{{ t.brand }}</a>
+    <a href="index.dc.html">{{ t.homeLink }}</a>
+    <a href="Kwaak YoungHoon Bio.dc.html" style="opacity:0.5;">{{ t.personLink }}</a>
+    <a href="Kwaak YoungHoon Korea.dc.html">{{ t.koreaLink }}</a>
+    <a href="Kwaak YoungHoon World.dc.html">{{ t.worldLink }}</a>
     <button onclick="{{ toggleLang }}" style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:14px; background:var(--color-bg); color:var(--color-accent); border:1px solid var(--color-accent); border-radius:var(--radius-md); padding:7px 16px; cursor:pointer;">{{ t.langButton }}</button>
   </nav>
 
   <!-- INTRO -->
   <section style="padding:var(--space-8) 8vw var(--space-6); border-bottom:1px solid var(--color-divider);">
-    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:260px 1fr; gap:var(--space-8);">
+    <div class="gcol-260" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:260px 1fr; gap:var(--space-8);">
       <div>
         <h6 style="color:var(--color-accent); margin-bottom:var(--space-2);">{{ t.bio.kicker }}</h6>
         <h2 style="margin-top:var(--space-1);">{{ t.bio.heading }}</h2>
@@ -57,10 +66,10 @@
       <h2 style="margin-top:var(--space-1); max-width:700px;">{{ t.early.heading }}</h2>
     </div>
     <div style="max-width:1000px; margin:0 auto; position:relative;">
-      <div style="position:absolute; left:112px; top:8px; bottom:8px; width:1px; background:var(--color-divider);"></div>
+      <div class="tl-line" style="position:absolute; left:112px; top:8px; bottom:8px; width:1px; background:var(--color-divider);"></div>
       <sc-for list="{{ t.early.items }}" as="item" hint-placeholder-count="3">
-        <div style="display:grid; grid-template-columns:112px 1fr; gap:var(--space-6); padding:0 0 var(--space-6); position:relative;">
-          <div style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; color:var(--color-accent); padding-top:2px; text-align:right;">{{ item.year }}</div>
+        <div class="gcol-112" style="display:grid; grid-template-columns:112px 1fr; gap:var(--space-6); padding:0 0 var(--space-6); position:relative;">
+          <div class="tl-year" style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; color:var(--color-accent); padding-top:2px; text-align:right;">{{ item.year }}</div>
           <div style="position:relative; padding-left:var(--space-4);">
             <div style="position:absolute; left:-6px; top:7px; width:11px; height:11px; border-radius:50%; background:var(--color-bg); border:2px solid var(--color-accent);"></div>
             <h3 style="margin:0 0 var(--space-2);">{{ item.title }}</h3>
@@ -76,7 +85,7 @@
 
   <!-- WCO / PEACE -->
   <section style="padding:var(--space-8) 8vw; background:var(--color-surface); border-top:1px solid var(--color-divider);">
-    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8);">
+    <div class="gcol-2" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-8);">
       <div>
         <h6 style="color:var(--color-accent);">{{ t.peace.kicker }}</h6>
         <h2 style="margin:var(--space-1) 0 var(--space-4);">{{ t.peace.heading }}</h2>
@@ -107,11 +116,13 @@ class Component extends DCLogic {
   content = {
     en: {
       brand: 'KWAAK YoungHoon',
-      backLink: '← Home',
-      projectsLink: 'Projects',
+      homeLink: '← Home',
+      personLink: 'Person',
+      koreaLink: 'Korea',
+      worldLink: 'World',
       langButton: '한국어',
       bio: {
-        kicker: 'Biography',
+        kicker: 'Person — Human Scale',
         heading: 'A fifty-year journey of dreams',
         photoCaption: 'Dr. KWAAK YoungHoon (seated) and Professor KIM Kwangsoo, 2021',
         paragraph: 'Born into the ruins of the Korean War, KWAAK YoungHoon decided as a teenager to devote his life to rebuilding his country. He studied architecture, planning, political science, landscape architecture, and education in the United States — at MIT and Harvard — before returning home to help design the physical and civic infrastructure of modern Korea. For over fifty years he has shaped the events, streets, parks, and systems that define how Koreans live, move, and gather, working across eight presidential administrations without ever holding formal office.',
@@ -147,11 +158,13 @@ class Component extends DCLogic {
     },
     ko: {
       brand: '곽영훈',
-      backLink: '← 홈으로',
-      projectsLink: '프로젝트',
+      homeLink: '← 홈으로',
+      personLink: '인물',
+      koreaLink: '대한민국',
+      worldLink: '세계',
       langButton: 'English',
       bio: {
-        kicker: '약력',
+        kicker: '인물 — 개인 차원',
         heading: '반세기에 걸친 꿈의 대장정',
         photoCaption: '곽영훈 박사(앉음)와 김광수 교수, 2021년',
         paragraph: '한국전쟁의 폐허 속에서 태어난 곽영훈은 십 대 시절 조국의 재건에 삶을 바치기로 결심했다. 미국 MIT와 하버드에서 건축, 도시계획, 정책학, 조경, 교육학을 공부한 뒤 귀국하여 현대 한국의 물리적·시민적 기반을 설계하는 일에 뛰어들었다. 지난 50여 년간 그는 공식 관직을 맡은 적 없이 여덟 정권을 넘나들며, 한국인의 삶과 이동, 만남의 방식을 정의하는 행사와 거리, 공원, 시스템을 만들어왔다.',
