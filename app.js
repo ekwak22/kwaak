@@ -16,7 +16,7 @@
   const selected=city.value===''?'7':city.value;
   city.replaceChildren(...cities.map((c,i)=>{const option=document.createElement('option');option.value=i;option.textContent=c[0]+' · '+t(c[1],c[2]);return option}));
   city.value=selected;const c=cities[Number(selected)];
-  const cityImage=document.querySelector('#city-image');if(cityImage){cityImage.src='website/assets/reference-'+[34,33,32,31,30,29,37,40,38,27,41,39,28][Number(selected)]+'.jpg';cityImage.alt=t(c[1]+' — WCO host-city archive',c[2]+' — WCO 개최도시 기록');}
+  const cityImage=document.querySelector('#city-image');if(cityImage){cityImage.src=window.kwaakCityImages[String([34,33,32,31,30,29,37,40,38,27,41,39,28][Number(selected)])];cityImage.alt=t(c[1]+' — WCO host-city archive',c[2]+' — WCO 개최도시 기록');}
   document.querySelector('#city-year').textContent=c[0]+' / '+t('SILK ROAD MAYORS FORUM','실크로드 시장단 포럼');
   document.querySelector('#city-name').textContent=t(c[1],c[2]);
   document.querySelector('#city-country').textContent=t(c[3],c[4]);
@@ -30,7 +30,7 @@
   document.querySelector('#result-count').textContent=t(`${count} of ${total} selected stories`, `선별된 이야기 ${total}개 중 ${count}개`);
   document.querySelector('#empty').hidden=count!==0;
  }
- function updateImage(){if(!activeImage)return;const caption=t(activeImage.dataset.captionEn,activeImage.dataset.captionKo);const image=document.querySelector('#enlarged-image');image.src='website/assets/'+activeImage.dataset.image;image.alt=caption;document.querySelector('#image-caption').textContent=caption;}
+ function updateImage(){if(!activeImage)return;const caption=t(activeImage.dataset.captionEn,activeImage.dataset.captionKo);const image=document.querySelector('#enlarged-image');image.src=activeImage.querySelector('img').src;image.alt=caption;document.querySelector('#image-caption').textContent=caption;}
  function setLanguage(next){
   language=next;document.documentElement.lang=language;
   try{localStorage.setItem('kwaak-language',language)}catch(_){}
