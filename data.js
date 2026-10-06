@@ -1,1 +1,449 @@
-window.accomplishments = [{"category": "person", "year": "1958", "title": "The promise that came first", "summary": "A young person’s answer to the landscape left by war.", "body": "In 1958, while still in middle school, Kwaak spoke with his elder brother about how they might contribute to Korea’s future. His brother imagined a constitutional framework for reunification. Kwaak imagined a place where people from North and South could live together: a peace city near the DMZ.\n\nArchitecture appealed to him because it brought many interests into one field — geography, engineering, art, politics, landscape and education. Designing a city meant thinking about the conditions of everyday life, not only its buildings.\n\nThat early promise connects the different scales of his work: the individual, the nation and the wider world. The peace city remained an aspiration, but the question of how to live together continued to guide his planning and civic work.", "image": "book-image2.jpg", "page": 11, "tag": "Life & philosophy", "ko": {"year": "1958", "title": "모든 구상에 앞선 약속", "summary": "전쟁이 남긴 풍경 앞에서 한 소년이 품은 뜻.", "body": "1958년, 중학생이던 곽영훈은 형과 함께 대한민국의 미래에 어떻게 기여할지 이야기했습니다. 형은 통일을 위한 헌법의 틀을, 곽영훈은 남과 북의 사람들이 함께 살아갈 터전을 꿈꾸었습니다. 그 터전은 비무장지대 가까이의 평화도시였습니다.\n\n건축은 지리, 공학, 예술, 정치, 조경과 교육에 대한 관심을 한데 모을 수 있는 분야였습니다. 도시를 설계한다는 것은 건물뿐 아니라 일상의 삶을 가능하게 하는 조건을 생각하는 일이었습니다.\n\n이 어린 시절의 약속은 개인에서 국가, 세계로 이어지는 활동을 관통합니다. 평화도시는 여전히 구상이지만, 어떻게 함께 살아갈 것인가라는 질문은 계획과 시민활동의 바탕이 되었습니다.", "tag": "삶과 철학", "role": "평화로운 공존을 향한 평생의 뜻", "sourceNote": "『한강의 기적』 영어판 11쪽."}, "id": 0, "role": "A lifelong commitment to peaceful coexistence", "sourceNote": "Miracle on the Han River, English edition, p. 11.", "gallery": [{"image": "book-image2.jpg", "caption": "A working life surrounded by books and plans.", "koCaption": "책과 계획 속에서 이어 온 삶."}]}, {"category": "person", "year": "Learning", "title": "Learning to bring the world home", "summary": "An exchange visit grew into a wider education — and a strategy for national development.", "body": "In 1962, Kwaak traveled to the United States as a Korean representative in the Youth Red Cross Operation VISTA exchange. Seeing a different world strengthened his determination to study abroad and contribute to Korea’s development.\n\nHe completed undergraduate and graduate architecture studies at MIT, pursued public policy and education at Harvard, and later connected practice with teaching in Korea. His Korean biography also records a doctorate in education from Dongguk University.\n\nA visit to the 1964 New York World’s Fair gave him a lasting idea: if young Koreans could not all travel abroad to see the future, an international exposition could bring that experience to Korea. Major events could become a reason to build lasting infrastructure as well as a meeting place for cultures.", "image": "book-image3.jpg", "page": 2, "tag": "Education", "ko": {"year": "배움", "title": "세계를 배우고, 한국의 미래를 그리다", "summary": "교류의 경험은 더 넓은 배움과 국가발전의 구상으로 이어졌습니다.", "body": "1962년 곽영훈은 청소년 적십자 VISTA 교류 프로그램의 한국 대표로 미국을 방문했습니다. 다른 세계를 직접 본 경험은 해외에서 배우고 한국의 발전에 기여하겠다는 다짐으로 이어졌습니다.\n\nMIT에서 건축학 학부와 대학원 과정을 마쳤고, 하버드에서 정책학과 교육학을 공부했습니다. 이후 국내에서 실무와 교육을 연결했으며, 한국어 약력에는 동국대학교 교육학 박사 학위도 기록되어 있습니다.\n\n1964년 뉴욕 세계박람회 방문은 오래 남을 구상을 낳았습니다. 한국의 청소년들이 모두 해외로 미래를 보러 갈 수 없다면, 국제박람회를 한국에 열어 그 경험을 나눌 수 있다는 생각이었습니다. 국제행사는 문화가 만나는 자리이자 오래 사용할 기반시설을 만드는 계기가 될 수 있었습니다.", "tag": "교육", "role": "MIT 건축학, 하버드 정책학·교육학 수학, 국내 교육활동", "sourceNote": "『한강의 기적』 영어판 2·12·15~18쪽, 한국어 약력의 학력 항목."}, "id": 2, "role": "MIT architecture; Harvard policy and education studies; teaching in Korea", "sourceNote": "Miracle on the Han River, English edition, pp. 2, 12, 15–18; Korean biography, education section.", "gallery": [{"image": "book-image3.jpg", "caption": "The VISTA Korean delegation: Ban Ki-moon at far left, Kwaak at far right.", "koCaption": "VISTA 한국 대표단. 왼쪽 끝 반기문, 오른쪽 끝 곽영훈."}, {"image": "book-image10.jpg", "caption": "The New York World’s Fair site, which helped inspire a vision for an Expo in Korea.", "koCaption": "한국의 박람회 구상에 영감을 준 뉴욕 세계박람회장."}]}, {"category": "person", "year": "Taekwondo", "title": "Discipline shared through teaching", "summary": "Taekwondo and civic service add a personal dimension to a life of planning.", "body": "At the end of his studies in the United States, Kwaak founded the MIT–Harvard Taekwondo Club and taught students and professors. He recalls using the money he earned to travel to Europe and study the 1972 Munich Olympics in person, photographing venues and making notes.\n\nHis biography records a ninth-degree black belt and leadership in the Chung Do Kwan World Federation. The same thread of teaching and service appears in his founding work for the Beautiful School Movement and the clean public restroom civic movement.\n\nThese activities place his larger projects in a human context: learning through practice, sharing knowledge, and paying attention to the ordinary settings in which people live.", "image": "book-image4.jpg", "page": 1, "tag": "Taekwondo", "ko": {"year": "태권도", "title": "수련을 나누는 가르침", "summary": "태권도와 시민활동은 계획가의 삶을 이루는 또 하나의 축입니다.", "body": "미국 유학을 마칠 무렵 곽영훈은 MIT–하버드 태권도 클럽을 만들어 학생과 교수들을 가르쳤습니다. 그 수입으로 유럽에 가서 1972년 뮌헨올림픽을 직접 살펴보며 경기장 사진을 찍고 기록했다고 회고합니다.\n\n약력에는 태권도 9단과 청도관 세계연맹에서의 활동이 기록되어 있습니다. 가르침과 봉사라는 흐름은 아름다운학교운동, 깨끗한 화장실 시민운동의 창립 활동에서도 이어집니다.\n\n실천하며 배우고, 지식을 나누고, 사람들이 살아가는 일상의 환경에 관심을 기울이는 태도는 국가 규모의 프로젝트와 개인의 삶을 연결합니다.", "tag": "태권도", "role": "태권도 9단, 교육자이자 시민활동가", "sourceNote": "『한강의 기적』 영어판 18쪽, 한국어 약력의 국내 활동 항목."}, "id": 19, "role": "Ninth-degree Taekwondo black belt; educator and civic organizer", "sourceNote": "Miracle on the Han River, English edition, p. 18; Korean biography, civic activities.", "gallery": [{"image": "book-image4.jpg", "caption": "Taekwondo practice at MIT, from the biography’s photographic archive.", "koCaption": "전기에 수록된 MIT 태권도 수련 사진."}, {"image": "book-image11.jpg", "caption": "Ninth-degree black-belt certificate reproduced in the biography.", "koCaption": "전기에 수록된 태권도 9단 증서."}]}, {"category": "nation", "year": "1988", "title": "An Olympic park with a life beyond the Games", "summary": "Sports facilities, green space and cultural heritage in one lasting public place.", "body": "After Seoul was selected to host the 1988 Olympics, Kwaak’s practice took responsibility for the design and construction supervision of Olympic Park. His aim was to make the facilities useful during the event and long afterward, connecting sport with education and public recreation.\n\nOne defining decision concerned Mongchontoseong, the ancient earthen fortress on the site. In his recollection, some proposals would have removed it to make room for new facilities. Kwaak argued for keeping the historic landscape as a place for visitors to rest and encounter the past.\n\nThe park was completed in time for the 1986 Asian Games, ahead of the Olympics. Its combination of sports venues and preserved landscape expresses a recurring idea in his work: a major event should leave a place that continues to serve people.", "image": "book-image18.jpg", "page": 26, "tag": "Olympic planning", "ko": {"year": "1988", "title": "올림픽 이후의 삶까지 품은 공원", "summary": "경기시설과 녹지, 문화유산을 하나의 공공공간으로.", "body": "서울의 1988년 올림픽 개최가 확정된 뒤, 곽영훈의 연구소는 올림픽공원의 설계와 공사 감리를 맡았습니다. 대회 중의 기능뿐 아니라 이후의 교육과 시민 여가까지 고려한 공간을 지향했습니다.\n\n중요한 결정 중 하나는 부지 안의 고대 토성인 몽촌토성의 보존이었습니다. 그의 회고에 따르면, 새 시설을 위해 토성을 없애자는 제안도 있었습니다. 곽영훈은 역사적 지형을 관람객이 쉬고 과거를 만나는 공간으로 남겨야 한다고 설득했습니다.\n\n공원은 올림픽에 앞서 1986년 아시안게임에 맞춰 완공되었습니다. 경기시설과 보존된 경관의 조합은 그의 일관된 생각을 보여 줍니다. 큰 행사는 끝난 뒤에도 사람들을 위한 장소를 남겨야 한다는 것입니다.", "tag": "올림픽 계획", "role": "서울올림픽 마스터플래너, 곽영훈 연구소의 올림픽공원 설계·감리", "sourceNote": "『한강의 기적』 영어판 27~29쪽, 한국어 약력."}, "id": 4, "role": "Seoul Olympics master planner; Olympic Park design and construction supervision through KWAAK E.S.P.R.I.", "sourceNote": "Miracle on the Han River, English edition, pp. 27–29; Korean biography.", "gallery": [{"image": "book-image18.jpg", "caption": "Mongchontoseong and the landscape of Olympic Park.", "koCaption": "몽촌토성과 올림픽공원의 경관."}, {"image": "book-image16.jpg", "caption": "An early sketch of the Olympic Park master plan.", "koCaption": "올림픽공원 마스터플랜의 초기 스케치."}]}, {"category": "nation", "year": "Seoul", "title": "The river at the heart of Seoul", "summary": "A riverfront conceived as a shared landscape, not the edge of the city.", "body": "Kwaak presented his Han River Comprehensive Development Plan in 1977. Its starting point was a change in perspective: as Seoul grew southward, the river should become the city’s center rather than its southern boundary.\n\nThe plan joined river management, balanced development of the two banks and a connected green landscape. He envisaged linking the east–west river corridor with the north–south sequence of Bukhansan, Namsan and Gwanaksan, and extending pedestrian routes along tributaries.\n\nPreparations for the Olympics accelerated infrastructure work. Yet the biography also records his disappointment that some riverside areas he hoped to keep green were developed for housing. The story is both a planning contribution and a reflection on the choices that shape a city.", "image": "book-image61.jpg", "page": 64, "tag": "Landscape & infrastructure", "ko": {"year": "서울", "title": "서울의 중심으로 바라본 한강", "summary": "도시의 경계가 아닌, 함께 누리는 중심 공간의 구상.", "body": "곽영훈은 1977년 한강종합개발계획을 발표했습니다. 출발점은 관점의 전환이었습니다. 서울이 남쪽으로 성장하는 만큼 한강은 도시의 남쪽 경계가 아니라 중심이 되어야 한다는 생각이었습니다.\n\n계획은 하천 관리, 양안의 균형발전, 연결된 녹지 체계를 함께 고려했습니다. 동서로 흐르는 한강을 북한산·남산·관악산의 남북축과 연결하고, 지천을 따라 보행로를 이어 가는 구상이었습니다.\n\n올림픽 준비는 기반시설 조성을 앞당겼습니다. 한편 전기는 녹지로 남기고자 했던 일부 강변이 주거지로 개발된 데 대한 아쉬움도 전합니다. 한강 이야기는 계획의 기여와 함께 도시를 바꾸는 선택에 대한 성찰을 담고 있습니다.", "tag": "경관과 기반시설", "role": "한강종합개발 및 올림픽대로 계획", "sourceNote": "『한강의 기적』 영어판 64~67쪽."}, "id": 8, "role": "Han River Comprehensive Development and Olympic-daero planning", "sourceNote": "Miracle on the Han River, English edition, pp. 64–67.", "gallery": [{"image": "book-image61.jpg", "caption": "Olympic-daero along the Han River, as pictured in the biography.", "koCaption": "전기에 수록된 한강변 올림픽대로."}]}, {"category": "nation", "year": "Seoul", "title": "A circle that connects a growing city", "summary": "Subway Line 2 as a way to connect old and new centers of Seoul.", "body": "In the 1970s, Kwaak questioned whether a rapidly growing Seoul could continue to depend on a single business center north of the Han River. His circular Line 2 concept connected the traditional city with the then-developing areas south of the river.\n\nThe idea was to connect several centers rather than direct every journey toward one downtown. In the biography, he links this approach to the larger task of preparing Seoul’s infrastructure for its future growth and international events.\n\nHe also stresses that a subway is a collective achievement: planners, construction workers, engineers and many others made it possible. This perspective gives the project its human scale — a transport network exists through cooperation and serves the daily movements of its citizens.", "image": "book-image65.jpg", "page": 72, "tag": "Transport", "ko": {"year": "서울", "title": "성장하는 도시를 잇는 순환선", "summary": "서울의 기존 도심과 새로운 중심을 연결하는 지하철 2호선.", "body": "1970년대, 곽영훈은 급성장하는 서울이 한강 북쪽의 단일 업무 중심에 계속 의존할 수 있는지 질문했습니다. 지하철 2호선의 순환 구상은 기존 도심과 당시 개발이 진행되던 강남을 연결했습니다.\n\n모든 이동을 한 도심으로 집중시키기보다 여러 중심을 서로 잇는 생각이었습니다. 전기에서 그는 이 접근을 서울의 미래 성장과 국제행사에 대비하는 기반시설 계획과 연결합니다.\n\n그는 지하철이 계획가 한 사람의 성과가 아님도 강조합니다. 땅을 파고 구조물을 만들고 설비를 설치한 수많은 사람들이 함께한 결과라는 것입니다. 협력으로 만들어져 시민의 일상적 이동을 돕는다는 점에서, 도시 규모의 계획은 사람의 삶과 만납니다.", "tag": "교통", "role": "초기 지하철망 계획과 역사 설계", "sourceNote": "『한강의 기적』 영어판 72~75쪽."}, "id": 10, "role": "Early subway network planning and station design", "sourceNote": "Miracle on the Han River, English edition, pp. 72–75.", "gallery": [{"image": "book-image65.jpg", "caption": "The Line 2 master-plan diagram reproduced in the biography.", "koCaption": "전기에 수록된 지하철 2호선 마스터플랜 도표."}, {"image": "book-image67.jpg", "caption": "A sketch of the Seoul subway lines.", "koCaption": "서울 지하철 노선 스케치."}]}, {"category": "nation", "year": "1993", "title": "An Expo built around experience", "summary": "Daejeon’s scientific future, connected to culture and resources.", "body": "Daejeon occupied a strategic place in Kwaak’s 1971 national vision. After Seoul’s Olympic selection in 1981, he proposed pursuing an Expo there, connecting an international event with the development of Korea’s central region.\n\nFor the master plan, he described three priorities: activities should support a coherent theme; visitors should learn through experience rather than only looking at exhibits; and facilities should remain useful after the event.\n\nThe Expo’s official theme, “The Road to a New Leap,” joined traditional skills with modern technology and emphasized efficient resource use and recycling. The Hanbit Tower and surrounding pavilions gave physical form to an approach that linked science with people, environment and the future.", "image": "book-image43.jpg", "page": 44, "tag": "Science & culture", "ko": {"year": "1993", "title": "경험을 중심에 둔 엑스포", "summary": "과학의 미래를 문화와 자원의 문제에 연결하다.", "body": "대전은 곽영훈이 1971년에 그린 국가 비전에서 전략적 거점이었습니다. 1981년 서울의 올림픽 개최가 확정된 뒤 그는 대전 엑스포 추진을 제안하며 국제행사와 중부권 발전을 연결했습니다.\n\n그는 마스터플랜의 세 가지 원칙을 설명합니다. 개별 행사가 하나의 주제로 모일 것, 전시물을 보는 데서 나아가 방문객이 직접 경험할 것, 그리고 행사가 끝난 뒤에도 시설이 쓰일 것이었습니다.\n\n공식 주제인 ‘새로운 도약에의 길’은 전통기술과 현대과학의 조화, 자원의 효율적 이용과 재활용을 함께 다뤘습니다. 한빛탑과 주변 전시관은 과학을 사람, 환경, 미래와 연결하는 구상을 공간으로 보여 주었습니다.", "tag": "과학과 문화", "role": "1993 대전 엑스포 마스터플래너", "sourceNote": "『한강의 기적』 영어판 44~47쪽, 한국어 약력."}, "id": 5, "role": "Daejeon Expo 1993 master planner", "sourceNote": "Miracle on the Han River, English edition, pp. 44–47; Korean biography.", "gallery": [{"image": "book-image43.jpg", "caption": "Model of the Daejeon Expo venue.", "koCaption": "대전 엑스포 행사장 모형."}, {"image": "book-image42.jpg", "caption": "Conceptual sketch of the Expo site.", "koCaption": "엑스포 행사장의 개념 스케치."}]}, {"category": "nation", "year": "2012", "title": "Why Yeosu? A case for regional balance", "summary": "A coastal city’s needs became part of the argument for its opportunity.", "body": "Critics questioned whether Yeosu had the hotels, transport and population to support an international Expo. Kwaak’s response reversed the question: could hosting the event help bring the investment and attention the region needed?\n\nAs bid committee chair, he worked with the city’s leadership and citizens to make the case for Yeosu. He connected its coastal character and position in the southern region to a broader argument for balanced national development.\n\nThe 2012 Expo ultimately focused on “The Living Ocean and Coast.” Kwaak distinguishes that official theme from his own earlier peace-oriented proposal. His contribution is presented here as bid leadership and strategic advocacy, grounded in a long relationship with Yeosu.", "image": "book-image53.jpg", "page": 52, "tag": "Maritime development", "ko": {"year": "2012", "title": "왜 여수인가: 균형발전의 선택", "summary": "해안도시의 과제가 새로운 기회의 이유가 되다.", "body": "여수가 국제박람회를 열기에 충분한 숙박·교통시설과 인구를 갖추었는지 의문이 제기되었습니다. 곽영훈은 질문을 뒤집었습니다. 박람회 개최가 바로 그 지역에 필요한 투자와 관심을 이끌 수 있지 않겠느냐는 것이었습니다.\n\n유치위원장으로서 그는 시의 지도부와 시민들과 함께 여수의 가능성을 설명했습니다. 해안도시의 특성과 남부권에서의 위치를 국가의 균형발전이라는 더 큰 논리로 연결했습니다.\n\n2012년 엑스포의 최종 주제는 ‘살아있는 바다, 숨쉬는 연안’이었습니다. 곽영훈은 이 공식 주제와 자신이 앞서 제시했던 평화 중심의 구상을 구분합니다. 여수와 맺어 온 오랜 관계 속에서 그의 기여는 유치 활동의 리더십과 전략적 제안으로 드러납니다.", "tag": "해양도시 발전", "role": "2005년 여수 엑스포 유치위원장 취임", "sourceNote": "『한강의 기적』 영어판 52~56쪽, 한국어 약력."}, "id": 6, "role": "Chair of the Yeosu Expo bid committee, appointed in 2005", "sourceNote": "Miracle on the Han River, English edition, pp. 52–56; Korean biography.", "gallery": [{"image": "book-image53.jpg", "caption": "Expo 2012 Yeosu Korea on the waterfront.", "koCaption": "해안에 자리한 2012 여수세계박람회장."}, {"image": "book-image54.jpg", "caption": "The Yeosu Expo’s illuminated waterfront attraction.", "koCaption": "여수 엑스포 해양공간의 야간 풍경."}]}, {"category": "nation", "year": "1971", "title": "One framework, many connected projects", "summary": "Development and environmental care considered on the same map.", "body": "Rather than treating every project as an isolated commission, Kwaak worked with a larger national picture. The 1971 M.V.I.P. placed a Vigor Axis alongside a Green Axis, connecting development opportunities with the country’s natural structure.\n\nThe reference traces later versions in 1979 and 1981: a long-range plan looking toward the year 2000 and a Techno-Cultra Network. These are frameworks for thinking and coordinating, rather than completed buildings in themselves.\n\nHis six connected concerns — economics, environment, education, engineering, energy and ethics — provide a useful lens for reading the projects above. A road, a park or an Expo could be considered for its effects on several dimensions of life at once.", "image": "book-image12.jpg", "page": 15, "tag": "National planning", "ko": {"year": "1971", "title": "하나의 비전, 서로 이어지는 사업들", "summary": "발전과 환경을 같은 지도 위에서 생각하다.", "body": "곽영훈은 각 사업을 독립된 과제로만 보지 않고 더 큰 국토의 그림 속에 놓았습니다. 1971년의 M.V.I.P.는 활성축과 녹지축을 함께 제시하며 발전의 가능성과 국토의 자연 구조를 연결했습니다.\n\n구성안에는 2000년을 내다본 1979년의 장기계획, 1981년의 테크노·컬트라 네트워크가 이어집니다. 이들은 개별 건축물의 완공 실적이 아니라 사고와 조정을 위한 계획의 틀입니다.\n\n경제·환경·교육·공학·에너지·윤리라는 여섯 가지 관심사는 앞선 프로젝트들을 이해하는 시선이 됩니다. 도로와 공원, 엑스포를 계획할 때 삶의 여러 차원에 미치는 영향을 함께 생각하는 방식입니다.", "tag": "국가계획", "role": "국가발전 비전과 실행계획 M.V.I.P.", "sourceNote": "웹페이지 비전 구성안 4~7쪽, 『한강의 기적』 영어판 15~25쪽."}, "id": 3, "role": "Master Vision and Implementation Plan (M.V.I.P.)", "sourceNote": "Website vision outline, pp. 4–7; Miracle on the Han River, English edition, pp. 15–25.", "gallery": [{"image": "book-image12.jpg", "caption": "National planning axes reproduced in the biography.", "koCaption": "전기에 수록된 국토계획의 축 구상."}]}, {"category": "global", "year": "1988", "title": "Olympeace: a civic appeal for peace", "summary": "An international event became a reason to reach across divisions.", "body": "Kwaak founded the World Citizens Organization in 1987, as Seoul prepared for an Olympics shadowed by earlier international boycotts. The Seoul Assembly of Olympeace brought together civic, religious and cultural figures, with Ham Seok-heon as chair and Kwaak as vice-chair responsible for operations.\n\nIts appeal rested on four principles: participation without boycotts, suspension of political conflict during the Games, fair play, and a contribution to world peace. The appeal was translated into several languages and circulated internationally. The WCO record reports 532 supporters.\n\nKwaak also wrote to Mikhail Gorbachev and built the Olympeace House as a proposed reception venue. Gorbachev did not visit for the Games. These efforts illustrate citizen-led outreach alongside official diplomacy; they are not presented as the sole explanation for international participation or later geopolitical change.", "image": "wco-image22.jpg", "page": 7, "tag": "Peace movement", "ko": {"year": "1988", "title": "올림피스: 시민의 평화 호소", "summary": "국제행사를 계기로 분열을 넘어 손을 내밀다.", "body": "곽영훈은 서울올림픽을 준비하던 1987년 세계시민기구 WCO를 설립했습니다. 앞선 올림픽들의 보이콧이 남긴 우려 속에서 서울올림픽 평화위원회는 시민·종교·문화계 인사들을 모았습니다. 함석헌이 위원장을, 곽영훈이 운영을 맡는 부위원장을 맡았습니다.\n\n평화 호소에는 네 원칙이 담겼습니다. 보이콧 없는 참여, 대회 기간 중 정치적 갈등의 중단, 정정당당한 경쟁, 세계평화에 대한 기여였습니다. 호소문은 여러 언어로 번역되어 국제적으로 전달되었으며, WCO 기록은 532명의 지지를 전합니다.\n\n곽영훈은 미하일 고르바초프에게 편지를 보내고 방문을 위한 영빈 공간으로 올림피스 하우스를 지었습니다. 고르바초프는 대회에 방문하지 않았습니다. 이 활동은 공식 외교와 함께한 시민의 평화 노력이며, 국제적 참여나 이후의 세계정세 변화를 단독으로 이끌었다고 단정하지 않습니다.", "tag": "평화운동", "role": "WCO 설립자, 서울올림픽 평화위원회 부위원장", "sourceNote": "『한강의 기적』 영어판 33~38쪽, WCO 발표자료 7~11쪽."}, "id": 14, "role": "WCO founder; vice-chair of the Seoul Assembly of Olympeace", "sourceNote": "Miracle on the Han River, English edition, pp. 33–38; WCO presentation, slides 7–11.", "gallery": [{"image": "wco-image22.jpg", "caption": "The Seoul Assembly of Olympeace committee meeting.", "koCaption": "서울올림픽 평화위원회 회의."}, {"image": "book-image28.jpg", "caption": "The Eternal Peace Flame at Olympic Park.", "koCaption": "올림픽공원의 영원한 평화의 불."}]}, {"category": "global", "year": "2006–2018", "title": "Cities as partners in peace", "summary": "The Silk Road became a framework for exchange, not only a historic route.", "body": "The Silk Road Mayors Forum brought mayors into conversation with civic groups, businesses, international organizations, scholars and students. Its topics included cultural coexistence, global citizenship, the economy and tourism.\n\nBeginning with Tashkent in 2006, the documented host sequence continued through cities including Pyeongtaek, Shiraz, Gaziantep, Yeosu and Antalya. Rotating the venue was part of the idea: each city could share its character and challenges while gaining a place in a wider conversation.\n\nThe supplied WCO presentation records historical participation from 206 cities in 69 countries. These are participation figures, not a count of projects built. For Kwaak, the forum’s experiences offered practical lessons for a future network of world cities.", "image": "book-image154.jpg", "page": 20, "tag": "City networks", "ko": {"year": "2006–2018", "title": "평화의 동반자로 만나는 도시들", "summary": "역사 속 길에서 오늘의 교류망으로 이어지는 실크로드.", "body": "실크로드 시장단 포럼은 시장들과 시민단체, 기업, 국제기구, 학자와 학생들이 대화하는 자리였습니다. 문명 간 조화, 세계시민성, 경제와 관광 등이 주요 의제였습니다.\n\n2006년 타슈켄트에서 시작해 평택, 시라즈, 가지안테프, 여수와 안탈리아 등으로 개최 도시가 이어졌습니다. 개최지를 바꾸는 것 역시 구상의 일부였습니다. 각 도시가 자신의 특성과 과제를 나누며 더 넓은 대화에 참여하도록 한 것입니다.\n\n제공된 WCO 발표자료는 역대 69개국 206개 도시의 참여를 기록합니다. 이는 건설된 프로젝트 수가 아닌 참여 규모입니다. 곽영훈에게 포럼의 경험은 미래의 세계도시 네트워크를 위한 실천적 배움이었습니다.", "tag": "도시 네트워크", "role": "실크로드 시장단 포럼 조직위원장", "sourceNote": "WCO 발표자료 20~39쪽, 『한강의 기적』 영어판 146~148쪽. 참여 수치는 WCO 발표자료를 따랐습니다."}, "id": 16, "role": "Silk Road Mayors Forum organizing chair", "sourceNote": "WCO presentation, slides 20–39; Miracle on the Han River, English edition, pp. 146–148. Participation figures follow the WCO presentation.", "gallery": [{"image": "book-image154.jpg", "caption": "The fourth Silk Road Mayors Forum, Pyeongtaek, 2009.", "koCaption": "2009년 평택에서 열린 제4회 실크로드 시장단 포럼."}, {"image": "wco-image104.jpg", "caption": "Yeosu, featured as the 2013 forum host in the WCO presentation.", "koCaption": "WCO 발표자료에 소개된 2013년 포럼 개최지 여수."}]}, {"category": "global", "year": "1990s", "title": "Cooperation at a shared border", "summary": "Planning as a way to discuss development, trust and environmental care.", "body": "At the meeting point of China, North Korea and Russia, the Tumen River region raised a question larger than transport or trade: could neighboring countries plan a shared future? Kwaak participated in the development discussions as a physical planner and UNDP advisor.\n\nHis proposal for a UN city, named the District of Respect and Trust, imagined a special place for cooperation. The biography makes clear that the Tumen initiative did not progress as he had hoped. The proposal is therefore shown here as a planning contribution, not a completed city.\n\nHe also worked on environmentally sensitive planning for Baekdusan/Changbaisan. His account links regional development with the need to protect landscapes before intensive development could damage them.", "image": "book-image125.jpg", "page": 127, "tag": "Regional cooperation", "ko": {"year": "1990년대", "title": "국경이 만나는 곳에서의 협력", "summary": "발전과 신뢰, 환경을 함께 논의하는 계획.", "body": "중국·북한·러시아의 국경이 만나는 두만강 지역은 교통이나 무역을 넘어선 질문을 던졌습니다. 이웃 국가들이 함께 미래를 계획할 수 있을까라는 질문이었습니다. 곽영훈은 공간계획가이자 UNDP 자문관으로 개발 논의에 참여했습니다.\n\n그가 제안한 유엔도시 ‘존중과 신뢰의 구역’은 협력을 위한 특별한 장소의 구상이었습니다. 전기는 두만강 사업이 기대만큼 진전되지 못했음을 밝힙니다. 따라서 여기서는 완성된 도시가 아닌 계획상의 기여로 소개합니다.\n\n백두산·창바이산의 환경친화적 계획에도 참여했습니다. 그의 회고는 지역발전과 함께, 무분별한 개발에 앞서 자연경관을 보호해야 한다는 관심을 보여 줍니다.", "tag": "지역협력", "role": "두만강 논의의 UNDP 수석건축가·계획가·자문관", "sourceNote": "『한강의 기적』 영어판 127~129쪽."}, "id": 15, "role": "UNDP chief architect/planner and senior advisor in the Tumen River discussions", "sourceNote": "Miracle on the Han River, English edition, pp. 127–129.", "gallery": [{"image": "book-image125.jpg", "caption": "Tumen River Area Development Programme map.", "koCaption": "두만강 지역개발계획 지도."}, {"image": "book-image124.jpg", "caption": "The Pyongyang preliminary meeting, 1992.", "koCaption": "1992년 평양 예비회의."}]}, {"category": "global", "year": "Vision", "title": "A peace city, still a horizon", "summary": "A lifelong proposal for places where different communities could live together.", "body": "The peace city imagined in Kwaak’s youth returned in proposals for the DMZ: a peace park and cities in its western, central and eastern areas. The plans sought to make coexistence tangible through a place, particularly for people divided by the Korean War.\n\nHis wider “World City” idea emphasized cooperation among cities while preserving local culture and ecology. In the Sinai Technology Valley concept in Egypt, he envisaged a place for nomads, farmers, businesses and technology workers within one wider urban framework.\n\nThese drawings matter as expressions of a direction: planning that links livelihoods, landscape and peaceful coexistence. They are presented as visions and design proposals, distinct from the completed parks and events elsewhere on this site.", "image": "book-image117.jpg", "page": 123, "tag": "Peace-city vision", "ko": {"year": "비전", "title": "아직 미래를 향한 평화도시", "summary": "서로 다른 공동체가 함께 살아갈 터전을 향한 평생의 구상.", "body": "어린 시절 품은 평화도시의 꿈은 DMZ의 평화공원과 서부·중부·동부 평화도시 구상으로 이어졌습니다. 전쟁으로 갈라진 사람들을 비롯해 서로 다른 공동체가 함께 살아갈 가능성을 장소로 보여 주려는 생각이었습니다.\n\n더 넓은 ‘세계도시’ 구상은 지역의 문화와 생태를 보존하면서 도시들이 협력하는 관계를 강조했습니다. 이집트 시나이 과학문명도시 구상에서는 유목민, 농민, 기업인과 첨단기술 종사자가 함께하는 도시의 틀을 상상했습니다.\n\n이 도면들은 생활과 경관, 평화로운 공존을 잇는 계획의 방향을 보여 줍니다. 이 사이트의 완성된 공원과 개최된 행사들과 구분하여 비전과 설계 제안으로 소개합니다.", "tag": "평화도시 구상", "role": "DMZ 평화도시와 세계도시의 계획 구상", "sourceNote": "『한강의 기적』 영어판 123~124·141~143쪽."}, "id": 17, "role": "DMZ peace-city and world-city planning concepts", "sourceNote": "Miracle on the Han River, English edition, pp. 123–124, 141–143.", "gallery": [{"image": "book-image117.jpg", "caption": "Proposal for a DMZ peace park and peace cities.", "koCaption": "DMZ 평화공원과 평화도시 구상도."}, {"image": "book-image141.jpg", "caption": "Sinai Technology Valley master plan, Egypt, 1997.", "koCaption": "1997년 이집트 시나이 과학문명도시 마스터플랜."}]}];
+window.accomplishments = [
+  {
+    "category": "person",
+    "year": "1958",
+    "title": "The promise that came first",
+    "summary": "A young person’s answer to the landscape left by war.",
+    "body": "In 1958, while still in middle school, Kwaak spoke with his elder brother about how they might contribute to Korea’s future. His brother imagined a constitutional framework for reunification. Kwaak imagined a place where people from North and South could live together: a peace city near the DMZ.\n\nArchitecture appealed to him because it brought many interests into one field — geography, engineering, art, politics, landscape and education. Designing a city meant thinking about the conditions of everyday life, not only its buildings.\n\nThat early promise connects the different scales of his work: the individual, the nation and the wider world. The peace city remained an aspiration, but the question of how to live together continued to guide his planning and civic work.",
+    "image": "book-image2.jpg",
+    "page": 11,
+    "tag": "Life & philosophy",
+    "ko": {
+      "year": "1958",
+      "title": "모든 구상에 앞선 약속",
+      "summary": "전쟁이 남긴 풍경 앞에서 한 소년이 품은 뜻.",
+      "body": "1958년, 중학생이던 곽영훈은 형과 함께 대한민국의 미래에 어떻게 기여할지 이야기했습니다. 형은 통일을 위한 헌법의 틀을, 곽영훈은 남과 북의 사람들이 함께 살아갈 터전을 꿈꾸었습니다. 그 터전은 비무장지대 가까이의 평화도시였습니다.\n\n건축은 지리, 공학, 예술, 정치, 조경과 교육에 대한 관심을 한데 모을 수 있는 분야였습니다. 도시를 설계한다는 것은 건물뿐 아니라 일상의 삶을 가능하게 하는 조건을 생각하는 일이었습니다.\n\n이 어린 시절의 약속은 개인에서 국가, 세계로 이어지는 활동을 관통합니다. 평화도시는 여전히 구상이지만, 어떻게 함께 살아갈 것인가라는 질문은 계획과 시민활동의 바탕이 되었습니다.",
+      "tag": "삶과 철학",
+      "role": "평화로운 공존을 향한 평생의 뜻",
+      "sourceNote": "『한강의 기적』 영어판 11쪽."
+    },
+    "id": 0,
+    "role": "A lifelong commitment to peaceful coexistence",
+    "sourceNote": "Miracle on the Han River, English edition, p. 11.",
+    "gallery": [
+      {
+        "image": "book-image2.jpg",
+        "caption": "A working life surrounded by books and plans.",
+        "koCaption": "책과 계획 속에서 이어 온 삶."
+      }
+    ]
+  },
+  {
+    "category": "person",
+    "year": "Learning",
+    "title": "Learning to bring the world home",
+    "summary": "An exchange visit grew into a wider education — and a strategy for national development.",
+    "body": "In 1962, Kwaak traveled to the United States as a Korean representative in the Youth Red Cross Operation VISTA exchange. Seeing a different world strengthened his determination to study abroad and contribute to Korea’s development.\n\nHe completed undergraduate and graduate architecture studies at MIT, pursued public policy and education at Harvard, and later connected practice with teaching in Korea. His Korean biography also records a doctorate in education from Dongguk University.\n\nA visit to the 1964 New York World’s Fair gave him a lasting idea: if young Koreans could not all travel abroad to see the future, an international exposition could bring that experience to Korea. Major events could become a reason to build lasting infrastructure as well as a meeting place for cultures.",
+    "image": "book-image3.jpg",
+    "page": 2,
+    "tag": "Education",
+    "ko": {
+      "year": "배움",
+      "title": "세계를 배우고, 한국의 미래를 그리다",
+      "summary": "교류의 경험은 더 넓은 배움과 국가발전의 구상으로 이어졌습니다.",
+      "body": "1962년 곽영훈은 청소년 적십자 VISTA 교류 프로그램의 한국 대표로 미국을 방문했습니다. 다른 세계를 직접 본 경험은 해외에서 배우고 한국의 발전에 기여하겠다는 다짐으로 이어졌습니다.\n\nMIT에서 건축학 학부와 대학원 과정을 마쳤고, 하버드에서 정책학과 교육학을 공부했습니다. 이후 국내에서 실무와 교육을 연결했으며, 한국어 약력에는 동국대학교 교육학 박사 학위도 기록되어 있습니다.\n\n1964년 뉴욕 세계박람회 방문은 오래 남을 구상을 낳았습니다. 한국의 청소년들이 모두 해외로 미래를 보러 갈 수 없다면, 국제박람회를 한국에 열어 그 경험을 나눌 수 있다는 생각이었습니다. 국제행사는 문화가 만나는 자리이자 오래 사용할 기반시설을 만드는 계기가 될 수 있었습니다.",
+      "tag": "교육",
+      "role": "MIT 건축학, 하버드 정책학·교육학 수학, 국내 교육활동",
+      "sourceNote": "『한강의 기적』 영어판 2·12·15~18쪽, 한국어 약력의 학력 항목."
+    },
+    "id": 2,
+    "role": "MIT architecture; Harvard policy and education studies; teaching in Korea",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 2, 12, 15–18; Korean biography, education section.",
+    "gallery": [
+      {
+        "image": "book-image3.jpg",
+        "caption": "The VISTA Korean delegation: Ban Ki-moon at far left, Kwaak at far right.",
+        "koCaption": "VISTA 한국 대표단. 왼쪽 끝 반기문, 오른쪽 끝 곽영훈."
+      },
+      {
+        "image": "book-image10.jpg",
+        "caption": "The New York World’s Fair site, which helped inspire a vision for an Expo in Korea.",
+        "koCaption": "한국의 박람회 구상에 영감을 준 뉴욕 세계박람회장."
+      }
+    ]
+  },
+  {
+    "category": "person",
+    "year": "Taekwondo",
+    "title": "Discipline shared through teaching",
+    "summary": "Taekwondo and civic service add a personal dimension to a life of planning.",
+    "body": "At the end of his studies in the United States, Kwaak founded the MIT–Harvard Taekwondo Club and taught students and professors. He recalls using the money he earned to travel to Europe and study the 1972 Munich Olympics in person, photographing venues and making notes.\n\nHis biography records a ninth-degree black belt and leadership in the Chung Do Kwan World Federation. The same thread of teaching and service appears in his founding work for the Beautiful School Movement and the clean public restroom civic movement.\n\nThese activities place his larger projects in a human context: learning through practice, sharing knowledge, and paying attention to the ordinary settings in which people live.",
+    "image": "book-image4.jpg",
+    "page": 1,
+    "tag": "Taekwondo",
+    "ko": {
+      "year": "태권도",
+      "title": "수련을 나누는 가르침",
+      "summary": "태권도와 시민활동은 계획가의 삶을 이루는 또 하나의 축입니다.",
+      "body": "미국 유학을 마칠 무렵 곽영훈은 MIT–하버드 태권도 클럽을 만들어 학생과 교수들을 가르쳤습니다. 그 수입으로 유럽에 가서 1972년 뮌헨올림픽을 직접 살펴보며 경기장 사진을 찍고 기록했다고 회고합니다.\n\n약력에는 태권도 9단과 청도관 세계연맹에서의 활동이 기록되어 있습니다. 가르침과 봉사라는 흐름은 아름다운학교운동, 깨끗한 화장실 시민운동의 창립 활동에서도 이어집니다.\n\n실천하며 배우고, 지식을 나누고, 사람들이 살아가는 일상의 환경에 관심을 기울이는 태도는 국가 규모의 프로젝트와 개인의 삶을 연결합니다.",
+      "tag": "태권도",
+      "role": "태권도 9단, 교육자이자 시민활동가",
+      "sourceNote": "『한강의 기적』 영어판 18쪽, 한국어 약력의 국내 활동 항목."
+    },
+    "id": 19,
+    "role": "Ninth-degree Taekwondo black belt; educator and civic organizer",
+    "sourceNote": "Miracle on the Han River, English edition, p. 18; Korean biography, civic activities.",
+    "gallery": [
+      {
+        "image": "book-image4.jpg",
+        "caption": "Taekwondo practice at MIT, from the biography’s photographic archive.",
+        "koCaption": "전기에 수록된 MIT 태권도 수련 사진."
+      },
+      {
+        "image": "book-image11.jpg",
+        "caption": "Ninth-degree black-belt certificate reproduced in the biography.",
+        "koCaption": "전기에 수록된 태권도 9단 증서."
+      }
+    ]
+  },
+  {
+    "category": "nation",
+    "year": "1988",
+    "title": "An Olympic park with a life beyond the Games",
+    "summary": "Sports facilities, green space and cultural heritage in one lasting public place.",
+    "body": "After Seoul was selected to host the 1988 Olympics, Kwaak’s practice took responsibility for the design and construction supervision of Olympic Park. His aim was to make the facilities useful during the event and long afterward, connecting sport with education and public recreation.\n\nOne defining decision concerned Mongchontoseong, the ancient earthen fortress on the site. In his recollection, some proposals would have removed it to make room for new facilities. Kwaak argued for keeping the historic landscape as a place for visitors to rest and encounter the past.\n\nThe park was completed in time for the 1986 Asian Games, ahead of the Olympics. Its combination of sports venues and preserved landscape expresses a recurring idea in his work: a major event should leave a place that continues to serve people.",
+    "image": "book-image18.jpg",
+    "page": 26,
+    "tag": "Olympic planning",
+    "ko": {
+      "year": "1988",
+      "title": "올림픽 이후의 삶까지 품은 공원",
+      "summary": "경기시설과 녹지, 문화유산을 하나의 공공공간으로.",
+      "body": "서울의 1988년 올림픽 개최가 확정된 뒤, 곽영훈의 연구소는 올림픽공원의 설계와 공사 감리를 맡았습니다. 대회 중의 기능뿐 아니라 이후의 교육과 시민 여가까지 고려한 공간을 지향했습니다.\n\n중요한 결정 중 하나는 부지 안의 고대 토성인 몽촌토성의 보존이었습니다. 그의 회고에 따르면, 새 시설을 위해 토성을 없애자는 제안도 있었습니다. 곽영훈은 역사적 지형을 관람객이 쉬고 과거를 만나는 공간으로 남겨야 한다고 설득했습니다.\n\n공원은 올림픽에 앞서 1986년 아시안게임에 맞춰 완공되었습니다. 경기시설과 보존된 경관의 조합은 그의 일관된 생각을 보여 줍니다. 큰 행사는 끝난 뒤에도 사람들을 위한 장소를 남겨야 한다는 것입니다.",
+      "tag": "올림픽 계획",
+      "role": "서울올림픽 마스터플래너, 곽영훈 연구소의 올림픽공원 설계·감리",
+      "sourceNote": "『한강의 기적』 영어판 27~29쪽, 한국어 약력."
+    },
+    "id": 4,
+    "role": "Seoul Olympics master planner; Olympic Park design and construction supervision through KWAAK E.S.P.R.I.",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 27–29; Korean biography.",
+    "gallery": [
+      {
+        "image": "book-image18.jpg",
+        "caption": "Mongchontoseong and the landscape of Olympic Park.",
+        "koCaption": "몽촌토성과 올림픽공원의 경관."
+      },
+      {
+        "image": "book-image16.jpg",
+        "caption": "An early sketch of the Olympic Park master plan.",
+        "koCaption": "올림픽공원 마스터플랜의 초기 스케치."
+      }
+    ]
+  },
+  {
+    "category": "nation",
+    "year": "Seoul",
+    "title": "The river at the heart of Seoul",
+    "summary": "A riverfront conceived as a shared landscape, not the edge of the city.",
+    "body": "Kwaak presented his Han River Comprehensive Development Plan in 1977. Its starting point was a change in perspective: as Seoul grew southward, the river should become the city’s center rather than its southern boundary.\n\nThe plan joined river management, balanced development of the two banks and a connected green landscape. He envisaged linking the east–west river corridor with the north–south sequence of Bukhansan, Namsan and Gwanaksan, and extending pedestrian routes along tributaries.\n\nPreparations for the Olympics accelerated infrastructure work. Yet the biography also records his disappointment that some riverside areas he hoped to keep green were developed for housing. The story is both a planning contribution and a reflection on the choices that shape a city.",
+    "image": "book-image61.jpg",
+    "page": 64,
+    "tag": "Landscape & infrastructure",
+    "ko": {
+      "year": "서울",
+      "title": "서울의 중심으로 바라본 한강",
+      "summary": "도시의 경계가 아닌, 함께 누리는 중심 공간의 구상.",
+      "body": "곽영훈은 1977년 한강종합개발계획을 발표했습니다. 출발점은 관점의 전환이었습니다. 서울이 남쪽으로 성장하는 만큼 한강은 도시의 남쪽 경계가 아니라 중심이 되어야 한다는 생각이었습니다.\n\n계획은 하천 관리, 양안의 균형발전, 연결된 녹지 체계를 함께 고려했습니다. 동서로 흐르는 한강을 북한산·남산·관악산의 남북축과 연결하고, 지천을 따라 보행로를 이어 가는 구상이었습니다.\n\n올림픽 준비는 기반시설 조성을 앞당겼습니다. 한편 전기는 녹지로 남기고자 했던 일부 강변이 주거지로 개발된 데 대한 아쉬움도 전합니다. 한강 이야기는 계획의 기여와 함께 도시를 바꾸는 선택에 대한 성찰을 담고 있습니다.",
+      "tag": "경관과 기반시설",
+      "role": "한강종합개발 및 올림픽대로 계획",
+      "sourceNote": "『한강의 기적』 영어판 64~67쪽."
+    },
+    "id": 8,
+    "role": "Han River Comprehensive Development and Olympic-daero planning",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 64–67.",
+    "gallery": [
+      {
+        "image": "book-image61.jpg",
+        "caption": "Olympic-daero along the Han River, as pictured in the biography.",
+        "koCaption": "전기에 수록된 한강변 올림픽대로."
+      }
+    ]
+  },
+  {
+    "category": "nation",
+    "year": "Seoul",
+    "title": "A circle that connects a growing city",
+    "summary": "Subway Line 2 as a way to connect old and new centers of Seoul.",
+    "body": "In the 1970s, Kwaak questioned whether a rapidly growing Seoul could continue to depend on a single business center north of the Han River. His circular Line 2 concept connected the traditional city with the then-developing areas south of the river.\n\nThe idea was to connect several centers rather than direct every journey toward one downtown. In the biography, he links this approach to the larger task of preparing Seoul’s infrastructure for its future growth and international events.\n\nHe also stresses that a subway is a collective achievement: planners, construction workers, engineers and many others made it possible. This perspective gives the project its human scale — a transport network exists through cooperation and serves the daily movements of its citizens.",
+    "image": "book-image65.jpg",
+    "page": 72,
+    "tag": "Transport",
+    "ko": {
+      "year": "서울",
+      "title": "성장하는 도시를 잇는 순환선",
+      "summary": "서울의 기존 도심과 새로운 중심을 연결하는 지하철 2호선.",
+      "body": "1970년대, 곽영훈은 급성장하는 서울이 한강 북쪽의 단일 업무 중심에 계속 의존할 수 있는지 질문했습니다. 지하철 2호선의 순환 구상은 기존 도심과 당시 개발이 진행되던 강남을 연결했습니다.\n\n모든 이동을 한 도심으로 집중시키기보다 여러 중심을 서로 잇는 생각이었습니다. 전기에서 그는 이 접근을 서울의 미래 성장과 국제행사에 대비하는 기반시설 계획과 연결합니다.\n\n그는 지하철이 계획가 한 사람의 성과가 아님도 강조합니다. 땅을 파고 구조물을 만들고 설비를 설치한 수많은 사람들이 함께한 결과라는 것입니다. 협력으로 만들어져 시민의 일상적 이동을 돕는다는 점에서, 도시 규모의 계획은 사람의 삶과 만납니다.",
+      "tag": "교통",
+      "role": "초기 지하철망 계획과 역사 설계",
+      "sourceNote": "『한강의 기적』 영어판 72~75쪽."
+    },
+    "id": 10,
+    "role": "Early subway network planning and station design",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 72–75.",
+    "gallery": [
+      {
+        "image": "book-image65.jpg",
+        "caption": "The Line 2 master-plan diagram reproduced in the biography.",
+        "koCaption": "전기에 수록된 지하철 2호선 마스터플랜 도표."
+      },
+      {
+        "image": "book-image67.jpg",
+        "caption": "A sketch of the Seoul subway lines.",
+        "koCaption": "서울 지하철 노선 스케치."
+      }
+    ]
+  },
+  {
+    "category": "nation",
+    "year": "1993",
+    "title": "An Expo built around experience",
+    "summary": "Daejeon’s scientific future, connected to culture and resources.",
+    "body": "Daejeon occupied a strategic place in Kwaak’s 1971 national vision. After Seoul’s Olympic selection in 1981, he proposed pursuing an Expo there, connecting an international event with the development of Korea’s central region.\n\nFor the master plan, he described three priorities: activities should support a coherent theme; visitors should learn through experience rather than only looking at exhibits; and facilities should remain useful after the event.\n\nThe Expo’s official theme, “The Road to a New Leap,” joined traditional skills with modern technology and emphasized efficient resource use and recycling. The Hanbit Tower and surrounding pavilions gave physical form to an approach that linked science with people, environment and the future.",
+    "image": "book-image43.jpg",
+    "page": 44,
+    "tag": "Science & culture",
+    "ko": {
+      "year": "1993",
+      "title": "경험을 중심에 둔 엑스포",
+      "summary": "과학의 미래를 문화와 자원의 문제에 연결하다.",
+      "body": "대전은 곽영훈이 1971년에 그린 국가 비전에서 전략적 거점이었습니다. 1981년 서울의 올림픽 개최가 확정된 뒤 그는 대전 엑스포 추진을 제안하며 국제행사와 중부권 발전을 연결했습니다.\n\n그는 마스터플랜의 세 가지 원칙을 설명합니다. 개별 행사가 하나의 주제로 모일 것, 전시물을 보는 데서 나아가 방문객이 직접 경험할 것, 그리고 행사가 끝난 뒤에도 시설이 쓰일 것이었습니다.\n\n공식 주제인 ‘새로운 도약에의 길’은 전통기술과 현대과학의 조화, 자원의 효율적 이용과 재활용을 함께 다뤘습니다. 한빛탑과 주변 전시관은 과학을 사람, 환경, 미래와 연결하는 구상을 공간으로 보여 주었습니다.",
+      "tag": "과학과 문화",
+      "role": "1993 대전 엑스포 마스터플래너",
+      "sourceNote": "『한강의 기적』 영어판 44~47쪽, 한국어 약력. 추가 이미지: 제공된 웹페이지 참고자료 모음."
+    },
+    "id": 5,
+    "role": "Daejeon Expo 1993 master planner",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 44–47; Korean biography. Additional images: the supplied webpage reference collection.",
+    "gallery": [
+      {
+        "image": "reference-8.jpg",
+        "caption": "Daejeon Expo: the exhibition grounds in model form.",
+        "koCaption": "대전 엑스포 대회장 모형도."
+      },
+      {
+        "image": "reference-7.jpg",
+        "caption": "The original master-plan sketch organizes the Expo around connected experiences.",
+        "koCaption": "체험을 서로 연결한 대전 엑스포 대회장 마스터플랜 스케치."
+      },
+      {
+        "image": "reference-9.jpg",
+        "caption": "Planning for life after the Expo: an after-use proposal.",
+        "koCaption": "행사 이후를 생각한 대전 엑스포 사후활용계획도."
+      }
+    ]
+  },
+  {
+    "category": "nation",
+    "year": "2012",
+    "title": "Why Yeosu? A case for regional balance",
+    "summary": "A coastal city’s needs became part of the argument for its opportunity.",
+    "body": "Critics questioned whether Yeosu had the hotels, transport and population to support an international Expo. Kwaak’s response reversed the question: could hosting the event help bring the investment and attention the region needed?\n\nAs bid committee chair, he worked with the city’s leadership and citizens to make the case for Yeosu. He connected its coastal character and position in the southern region to a broader argument for balanced national development.\n\nThe 2012 Expo ultimately focused on “The Living Ocean and Coast.” Kwaak distinguishes that official theme from his own earlier peace-oriented proposal. His contribution is presented here as bid leadership and strategic advocacy, grounded in a long relationship with Yeosu.",
+    "image": "book-image53.jpg",
+    "page": 52,
+    "tag": "Maritime development",
+    "ko": {
+      "year": "2012",
+      "title": "왜 여수인가: 균형발전의 선택",
+      "summary": "해안도시의 과제가 새로운 기회의 이유가 되다.",
+      "body": "여수가 국제박람회를 열기에 충분한 숙박·교통시설과 인구를 갖추었는지 의문이 제기되었습니다. 곽영훈은 질문을 뒤집었습니다. 박람회 개최가 바로 그 지역에 필요한 투자와 관심을 이끌 수 있지 않겠느냐는 것이었습니다.\n\n유치위원장으로서 그는 시의 지도부와 시민들과 함께 여수의 가능성을 설명했습니다. 해안도시의 특성과 남부권에서의 위치를 국가의 균형발전이라는 더 큰 논리로 연결했습니다.\n\n2012년 엑스포의 최종 주제는 ‘살아있는 바다, 숨쉬는 연안’이었습니다. 곽영훈은 이 공식 주제와 자신이 앞서 제시했던 평화 중심의 구상을 구분합니다. 여수와 맺어 온 오랜 관계 속에서 그의 기여는 유치 활동의 리더십과 전략적 제안으로 드러납니다.",
+      "tag": "해양도시 발전",
+      "role": "2005년 여수 엑스포 유치위원장 취임",
+      "sourceNote": "『한강의 기적』 영어판 52~56쪽, 한국어 약력. 추가 이미지: 제공된 웹페이지 참고자료 모음."
+    },
+    "id": 6,
+    "role": "Chair of the Yeosu Expo bid committee, appointed in 2005",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 52–56; Korean biography. Additional images: the supplied webpage reference collection.",
+    "gallery": [
+      {
+        "image": "reference-10.jpg",
+        "caption": "Soprano Sumi Jo’s appointment as a Yeosu Expo promotional ambassador, 2005.",
+        "koCaption": "2005년 여수 엑스포 홍보대사 조수미 위촉."
+      },
+      {
+        "image": "reference-11.jpg",
+        "caption": "Kwaak with Ban Ki-moon and BIE Secretary General Vicente González Loscertales, from the Yeosu bid archive.",
+        "koCaption": "여수 엑스포 유치 기록: 반기문, BIE 사무총장 로세르탈레스와 곽영훈."
+      }
+    ]
+  },
+  {
+    "category": "nation",
+    "year": "1971",
+    "title": "One framework, many connected projects",
+    "summary": "Development and environmental care considered on the same map.",
+    "body": "Rather than treating every project as an isolated commission, Kwaak worked with a larger national picture. The 1971 M.V.I.P. placed a Vigor Axis alongside a Green Axis, connecting development opportunities with the country’s natural structure.\n\nThe reference traces later versions in 1979 and 1981: a long-range plan looking toward the year 2000 and a Techno-Cultra Network. These are frameworks for thinking and coordinating, rather than completed buildings in themselves.\n\nHis six connected concerns — economics, environment, education, engineering, energy and ethics — provide a useful lens for reading the projects above. A road, a park or an Expo could be considered for its effects on several dimensions of life at once.",
+    "image": "book-image12.jpg",
+    "page": 15,
+    "tag": "National planning",
+    "ko": {
+      "year": "1971",
+      "title": "하나의 비전, 서로 이어지는 사업들",
+      "summary": "발전과 환경을 같은 지도 위에서 생각하다.",
+      "body": "곽영훈은 각 사업을 독립된 과제로만 보지 않고 더 큰 국토의 그림 속에 놓았습니다. 1971년의 M.V.I.P.는 활성축과 녹지축을 함께 제시하며 발전의 가능성과 국토의 자연 구조를 연결했습니다.\n\n구성안에는 2000년을 내다본 1979년의 장기계획, 1981년의 테크노·컬트라 네트워크가 이어집니다. 이들은 개별 건축물의 완공 실적이 아니라 사고와 조정을 위한 계획의 틀입니다.\n\n경제·환경·교육·공학·에너지·윤리라는 여섯 가지 관심사는 앞선 프로젝트들을 이해하는 시선이 됩니다. 도로와 공원, 엑스포를 계획할 때 삶의 여러 차원에 미치는 영향을 함께 생각하는 방식입니다.",
+      "tag": "국가계획",
+      "role": "국가발전 비전과 실행계획 M.V.I.P.",
+      "sourceNote": "웹페이지 비전 구성안 4~7쪽, 『한강의 기적』 영어판 15~25쪽. 추가 이미지: 제공된 웹페이지 참고자료 모음."
+    },
+    "id": 3,
+    "role": "Master Vision and Implementation Plan (M.V.I.P.)",
+    "sourceNote": "Website vision outline, pp. 4–7; Miracle on the Han River, English edition, pp. 15–25. Additional images: the supplied webpage reference collection.",
+    "gallery": [
+      {
+        "image": "reference-20.jpg",
+        "caption": "M.V.I.P. I (1971): Vigor and Green Axes.",
+        "koCaption": "M.V.I.P. I(1971): 활성축과 녹지축."
+      },
+      {
+        "image": "reference-21.jpg",
+        "caption": "M.V.I.P. II (1979): a long-range development plan for the year 2000.",
+        "koCaption": "M.V.I.P. II(1979): 2000년을 향한 장기종합개발계획."
+      },
+      {
+        "image": "reference-22.jpg",
+        "caption": "M.V.I.P. III (1981): the Techno-Cultra Network.",
+        "koCaption": "M.V.I.P. III(1981): 과학기술·문화예술 지대망."
+      }
+    ]
+  },
+  {
+    "category": "global",
+    "year": "1988",
+    "title": "Olympeace: a civic appeal for peace",
+    "summary": "An international event became a reason to reach across divisions.",
+    "body": "Kwaak founded the World Citizens Organization in 1987, as Seoul prepared for an Olympics shadowed by earlier international boycotts. The Seoul Assembly of Olympeace brought together civic, religious and cultural figures, with Ham Seok-heon as chair and Kwaak as vice-chair responsible for operations.\n\nIts appeal rested on four principles: participation without boycotts, suspension of political conflict during the Games, fair play, and a contribution to world peace. The appeal was translated into several languages and circulated internationally. The WCO record reports 532 supporters.\n\nKwaak also wrote to Mikhail Gorbachev and built the Olympeace House as a proposed reception venue. Gorbachev did not visit for the Games. These efforts illustrate citizen-led outreach alongside official diplomacy; they are not presented as the sole explanation for international participation or later geopolitical change.",
+    "image": "wco-image22.jpg",
+    "page": 7,
+    "tag": "Peace movement",
+    "ko": {
+      "year": "1988",
+      "title": "올림피스: 시민의 평화 호소",
+      "summary": "국제행사를 계기로 분열을 넘어 손을 내밀다.",
+      "body": "곽영훈은 서울올림픽을 준비하던 1987년 세계시민기구 WCO를 설립했습니다. 앞선 올림픽들의 보이콧이 남긴 우려 속에서 서울올림픽 평화위원회는 시민·종교·문화계 인사들을 모았습니다. 함석헌이 위원장을, 곽영훈이 운영을 맡는 부위원장을 맡았습니다.\n\n평화 호소에는 네 원칙이 담겼습니다. 보이콧 없는 참여, 대회 기간 중 정치적 갈등의 중단, 정정당당한 경쟁, 세계평화에 대한 기여였습니다. 호소문은 여러 언어로 번역되어 국제적으로 전달되었으며, WCO 기록은 532명의 지지를 전합니다.\n\n곽영훈은 미하일 고르바초프에게 편지를 보내고 방문을 위한 영빈 공간으로 올림피스 하우스를 지었습니다. 고르바초프는 대회에 방문하지 않았습니다. 이 활동은 공식 외교와 함께한 시민의 평화 노력이며, 국제적 참여나 이후의 세계정세 변화를 단독으로 이끌었다고 단정하지 않습니다.",
+      "tag": "평화운동",
+      "role": "WCO 설립자, 서울올림픽 평화위원회 부위원장",
+      "sourceNote": "『한강의 기적』 영어판 33~38쪽, WCO 발표자료 7~11쪽. 추가 이미지: 제공된 웹페이지 참고자료 모음."
+    },
+    "id": 14,
+    "role": "WCO founder; vice-chair of the Seoul Assembly of Olympeace",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 33–38; WCO presentation, slides 7–11. Additional images: the supplied webpage reference collection.",
+    "gallery": [
+      {
+        "image": "wco-image22.jpg",
+        "caption": "The Seoul Assembly of Olympeace committee meeting.",
+        "koCaption": "서울올림픽 평화위원회 회의."
+      },
+      {
+        "image": "reference-2.jpg",
+        "caption": "The Olympeace appeal: a public call for peace around the Seoul Olympics.",
+        "koCaption": "서울올림픽을 계기로 평화를 호소한 올림평화 호소문."
+      },
+      {
+        "image": "book-image28.jpg",
+        "caption": "The Eternal Peace Flame at Olympic Park.",
+        "koCaption": "올림픽공원의 영원한 평화의 불."
+      }
+    ]
+  },
+  {
+    "category": "global",
+    "year": "2006–2018",
+    "title": "Cities as partners in peace",
+    "summary": "The Silk Road became a framework for exchange, not only a historic route.",
+    "body": "The Silk Road Mayors Forum brought mayors into conversation with civic groups, businesses, international organizations, scholars and students. Its topics included cultural coexistence, global citizenship, the economy and tourism.\n\nBeginning with Tashkent in 2006, the documented host sequence continued through cities including Pyeongtaek, Shiraz, Gaziantep, Yeosu and Antalya. Rotating the venue was part of the idea: each city could share its character and challenges while gaining a place in a wider conversation.\n\nThe supplied WCO presentation records historical participation from 206 cities in 69 countries. These are participation figures, not a count of projects built. For Kwaak, the forum’s experiences offered practical lessons for a future network of world cities.",
+    "image": "book-image154.jpg",
+    "page": 20,
+    "tag": "City networks",
+    "ko": {
+      "year": "2006–2018",
+      "title": "평화의 동반자로 만나는 도시들",
+      "summary": "역사 속 길에서 오늘의 교류망으로 이어지는 실크로드.",
+      "body": "실크로드 시장단 포럼은 시장들과 시민단체, 기업, 국제기구, 학자와 학생들이 대화하는 자리였습니다. 문명 간 조화, 세계시민성, 경제와 관광 등이 주요 의제였습니다.\n\n2006년 타슈켄트에서 시작해 평택, 시라즈, 가지안테프, 여수와 안탈리아 등으로 개최 도시가 이어졌습니다. 개최지를 바꾸는 것 역시 구상의 일부였습니다. 각 도시가 자신의 특성과 과제를 나누며 더 넓은 대화에 참여하도록 한 것입니다.\n\n제공된 WCO 발표자료는 역대 69개국 206개 도시의 참여를 기록합니다. 이는 건설된 프로젝트 수가 아닌 참여 규모입니다. 곽영훈에게 포럼의 경험은 미래의 세계도시 네트워크를 위한 실천적 배움이었습니다.",
+      "tag": "도시 네트워크",
+      "role": "실크로드 시장단 포럼 조직위원장",
+      "sourceNote": "WCO 발표자료 20~39쪽, 『한강의 기적』 영어판 146~148쪽. 참여 수치는 WCO 발표자료를 따랐습니다. 추가 이미지: 제공된 웹페이지 참고자료 모음."
+    },
+    "id": 16,
+    "role": "Silk Road Mayors Forum organizing chair",
+    "sourceNote": "WCO presentation, slides 20–39; Miracle on the Han River, English edition, pp. 146–148. Participation figures follow the WCO presentation. Additional images: the supplied webpage reference collection.",
+    "gallery": [
+      {
+        "image": "book-image154.jpg",
+        "caption": "The fourth Silk Road Mayors Forum, Pyeongtaek, 2009.",
+        "koCaption": "2009년 평택에서 열린 제4회 실크로드 시장단 포럼."
+      },
+      {
+        "image": "reference-17.jpg",
+        "caption": "The 2014 Silk Road Mayors Forum gathering, from the supplied WCO archive.",
+        "koCaption": "제공된 WCO 자료 속 2014년 실크로드 시장단 포럼 단체 사진."
+      }
+    ]
+  },
+  {
+    "category": "global",
+    "year": "1990s",
+    "title": "Cooperation at a shared border",
+    "summary": "Planning as a way to discuss development, trust and environmental care.",
+    "body": "At the meeting point of China, North Korea and Russia, the Tumen River region raised a question larger than transport or trade: could neighboring countries plan a shared future? Kwaak participated in the development discussions as a physical planner and UNDP advisor.\n\nHis Tumen UN City proposal imagined a District of Respect and Trust (D.R.T.) near the border of North Korea, China and Russia. The supporting account describes a place where people from different cultures could live, work and learn together—extending the idea of a round-table conversation into a city. This was a peace-city proposal, not a completed United Nations city.\n\nHe also worked on environmentally sensitive planning for Baekdusan/Changbaisan. His account links regional development with the need to protect landscapes before intensive development could damage them.",
+    "image": "book-image125.jpg",
+    "page": 127,
+    "tag": "Regional cooperation",
+    "ko": {
+      "year": "1990년대",
+      "title": "국경이 만나는 곳에서의 협력",
+      "summary": "발전과 신뢰, 환경을 함께 논의하는 계획.",
+      "body": "중국·북한·러시아의 국경이 만나는 두만강 지역은 교통이나 무역을 넘어선 질문을 던졌습니다. 이웃 국가들이 함께 미래를 계획할 수 있을까라는 질문이었습니다. 곽영훈은 공간계획가이자 UNDP 자문관으로 개발 논의에 참여했습니다.\n\n두만강 유엔시 구상은 북한·중국·러시아 접경지역에 존중과 신뢰의 지구(D.R.T., District of Respect and Trust)를 제안한 것입니다. 참고자료는 서로 다른 문화를 지닌 사람들이 함께 살고 일하며 배우는 도시, 즉 원탁 대화를 도시로 확장한 공간으로 설명합니다. 이는 완공된 유엔도시가 아니라 평화도시 제안입니다.\n\n백두산·창바이산의 환경친화적 계획에도 참여했습니다. 그의 회고는 지역발전과 함께, 무분별한 개발에 앞서 자연경관을 보호해야 한다는 관심을 보여 줍니다.",
+      "tag": "지역협력",
+      "role": "두만강 논의의 UNDP 수석건축가·계획가·자문관",
+      "sourceNote": "『한강의 기적』 영어판 127~129쪽."
+    },
+    "id": 15,
+    "role": "UNDP chief architect/planner and senior advisor in the Tumen River discussions",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 127–129.",
+    "gallery": [
+      {
+        "image": "book-image125.jpg",
+        "caption": "Tumen River Area Development Programme map.",
+        "koCaption": "두만강 지역개발계획 지도."
+      },
+      {
+        "image": "book-image124.jpg",
+        "caption": "The Pyongyang preliminary meeting, 1992.",
+        "koCaption": "1992년 평양 예비회의."
+      }
+    ]
+  },
+  {
+    "category": "global",
+    "year": "Vision",
+    "title": "A peace city, still a horizon",
+    "summary": "A lifelong proposal for places where different communities could live together.",
+    "body": "The peace city imagined in Kwaak’s youth returned in proposals for the DMZ: a peace park and cities in its western, central and eastern areas. The plans sought to make coexistence tangible through a place, particularly for people divided by the Korean War.\n\nHis wider “World City” idea emphasized cooperation among cities while preserving local culture and ecology. In the Sinai Technology Valley concept in Egypt, he envisaged a place for nomads, farmers, businesses and technology workers within one wider urban framework.\n\nThese drawings matter as expressions of a direction: planning that links livelihoods, landscape and peaceful coexistence. They are presented as visions and design proposals, distinct from the completed parks and events elsewhere on this site.",
+    "image": "book-image117.jpg",
+    "page": 123,
+    "tag": "Peace-city vision",
+    "ko": {
+      "year": "비전",
+      "title": "아직 미래를 향한 평화도시",
+      "summary": "서로 다른 공동체가 함께 살아갈 터전을 향한 평생의 구상.",
+      "body": "어린 시절 품은 평화도시의 꿈은 DMZ의 평화공원과 서부·중부·동부 평화도시 구상으로 이어졌습니다. 전쟁으로 갈라진 사람들을 비롯해 서로 다른 공동체가 함께 살아갈 가능성을 장소로 보여 주려는 생각이었습니다.\n\n더 넓은 ‘세계도시’ 구상은 지역의 문화와 생태를 보존하면서 도시들이 협력하는 관계를 강조했습니다. 이집트 시나이 과학문명도시 구상에서는 유목민, 농민, 기업인과 첨단기술 종사자가 함께하는 도시의 틀을 상상했습니다.\n\n이 도면들은 생활과 경관, 평화로운 공존을 잇는 계획의 방향을 보여 줍니다. 이 사이트의 완성된 공원과 개최된 행사들과 구분하여 비전과 설계 제안으로 소개합니다.",
+      "tag": "평화도시 구상",
+      "role": "DMZ 평화도시와 세계도시의 계획 구상",
+      "sourceNote": "『한강의 기적』 영어판 123~124·141~143쪽."
+    },
+    "id": 17,
+    "role": "DMZ peace-city and world-city planning concepts",
+    "sourceNote": "Miracle on the Han River, English edition, pp. 123–124, 141–143.",
+    "gallery": [
+      {
+        "image": "book-image117.jpg",
+        "caption": "Proposal for a DMZ peace park and peace cities.",
+        "koCaption": "DMZ 평화공원과 평화도시 구상도."
+      },
+      {
+        "image": "book-image141.jpg",
+        "caption": "Sinai Technology Valley master plan, Egypt, 1997.",
+        "koCaption": "1997년 이집트 시나이 과학문명도시 마스터플랜."
+      }
+    ]
+  }
+];

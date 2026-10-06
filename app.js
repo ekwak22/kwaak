@@ -16,6 +16,7 @@
   const selected=city.value===''?'7':city.value;
   city.replaceChildren(...cities.map((c,i)=>{const option=document.createElement('option');option.value=i;option.textContent=c[0]+' · '+t(c[1],c[2]);return option}));
   city.value=selected;const c=cities[Number(selected)];
+  const cityImage=document.querySelector('#city-image');if(cityImage){cityImage.src='website/assets/reference-'+[34,33,32,31,30,29,37,40,38,27,41,39,28][Number(selected)]+'.jpg';cityImage.alt=t(c[1]+' — WCO host-city archive',c[2]+' — WCO 개최도시 기록');}
   document.querySelector('#city-year').textContent=c[0]+' / '+t('SILK ROAD MAYORS FORUM','실크로드 시장단 포럼');
   document.querySelector('#city-name').textContent=t(c[1],c[2]);
   document.querySelector('#city-country').textContent=t(c[3],c[4]);
